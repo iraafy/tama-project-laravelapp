@@ -25,6 +25,12 @@ class TopicController extends Controller
         return view('lecturer_views/add_topic', ['topicList' => $topic]);
     }
 
+    public function table_topic()
+    {
+        $topic = Topic::all();
+        return view('lecturer_views/table_topic', ['topicList' => $topic]);
+    }
+
     public function store(Request $request)
     {
         // dd($request->all());

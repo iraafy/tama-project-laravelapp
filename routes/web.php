@@ -30,6 +30,7 @@ Route::get('/interns', [InternController::class, 'index'])->middleware('auth');
 Route::get('/forums', [ForumController::class, 'index'])->middleware('auth');
 Route::get('/lecturer-dashboard', [TopicController::class, 'lecturer_dashboard'])->middleware('auth');
 Route::get('/add-topic', [TopicController::class, 'add_topic'])->middleware('auth');
+Route::get('/table-topic', [TopicController::class, 'table_topic'])->middleware('auth');
 Route::get('/add-intern', [InternController::class, 'add_intern'])->middleware('auth');
 Route::post('/topic', [TopicController::class, 'store'])->middleware('auth');
 Route::post('/intern', [InternController::class, 'store'])->middleware('auth');
