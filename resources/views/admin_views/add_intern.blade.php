@@ -16,7 +16,28 @@
                 <div class="row mb-3">
                     <label for="" class="col-sm-3 col-form-label">Role</label>
                     <div class="col-sm-9">
-                        <input type="text" class="form-control" name="role" placeholder="Role">
+                        <!-- <input type="text" class="form-control" name="role" placeholder="Role"> -->
+                        <select name="role" id="role">
+                            <option value="Frontend Developer" selected>Frontend Developer</option>
+                            <option value="Backend Developer" selected>Backend Developer</option>
+                            <option value="UI/UX Designer" selected>UI/UX Designer</option>
+                            <option value="Mobile Developer" selected>Mobile Developer</option>
+                            <option value="Data Scientist" selected>Data Scientist</option>
+                            <option value="Data Analyst" selected>Data Analyst</option>
+                            <option value="Data Engineer" selected>Data Engineer</option>
+                            <option value="Project Manager" selected>Project Manager</option>
+                            <option value="Business Analyst" selected>Business Analyst</option>
+                            <option value="Fullstack Developer" selected>Fullstack Developer</option>
+                            <option value="Game Developer" selected>Game Developer</option>
+                            <option value="DevOps Engineer" selected>DevOps Engineer</option>
+                            <option value="QA Engineer" selected>QA Engineer</option>
+                            <option value="IT Support" selected>IT Support</option>
+                            <option value="IT Consultant" selected>IT Consultant</option>
+                            <option value="IT Quality Assurance" selected>IT Quality Assurance</option>
+                            <option value="Artificial Intelligence Engineer" selected>Artificial Intelligence Engineer</option>
+                            <option value="Graphic Designer" selected>Graphic Designer</option>
+                            <option value="Lainnya" selected>Lainnya</option>
+                        </select><br>
                     </div>
                 </div>
                 <div class="row mb-3">
@@ -38,9 +59,9 @@
                     </div>
                 </div>
                 <div class="row mb-3">
-                    <label for="" class="col-sm-3 col-form-label">Informasi Lengkap</label>
+                    <label for="" class="col-sm-3 col-form-label">URL Information</label>
                     <div class="col-sm-9">
-                        <input type="text" class="form-control" name="url_information" placeholder="Informasi Lengkap">
+                        <input type="text" class="form-control" name="url_information" placeholder="URL Information">
                     </div>
                 </div>
                 <div class="row mb-3">
@@ -113,7 +134,7 @@
                                                     <label class="fw-bold pb-1" for="company_address">Alamat Perusahaan</label>
                                                     <input type="text" class="form-control mb-3" name="company_address" id="company_address" value="{{ $internData->company_address }}">
 
-                                                    <label class="fw-bold pb-1" for="url_information">Informasi Lengkap</label>
+                                                    <label class="fw-bold pb-1" for="url_information">URL Information</label>
                                                     <input type="text" class="form-control mb-3" name="url_information" id="url_information" value="{{ $internData->url_information }}">
 
                                                     <label class="fw-bold pb-1" for="internship_period">Periode</label>

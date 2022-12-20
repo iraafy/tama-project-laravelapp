@@ -5,7 +5,70 @@
 @section('content')
 <div class="wrappers">
     <div id="sidebar">
-        <div class="p-1 mt-4">
+        <div class="border-end bg-white" id="sidebar-wrapper">
+        <br><br>
+            <div class="list-group list-group-flush">
+                <a href="/interns?code=Frontend Developer" class="text-black list-group-item list-group-item-action list-group-item-light p-3" style="font-size: small;">
+                    Frontend Developer
+                </a>
+                <a href="/interns?code=Backend Developer" class="text-black list-group-item list-group-item-action list-group-item-light p-3" style="font-size: small;">
+                    Backend Developer
+                </a>
+                <a href="/interns?code=UI/UX Designer" class="text-black list-group-item list-group-item-action list-group-item-light p-3" style="font-size: small;">
+                    UI/UX Designer
+                </a>
+                <a href="/interns?code=Mobile Developer" class="text-black list-group-item list-group-item-action list-group-item-light p-3" style="font-size: small;">
+                    Mobile Developer
+                </a>
+                <a href="/interns?code=Data Scientist" class="text-black list-group-item list-group-item-action list-group-item-light p-3" style="font-size: small;">
+                    Data Scientist
+                </a>
+                <a href="/interns?code=Data Analyst" class="text-black list-group-item list-group-item-action list-group-item-light p-3" style="font-size: small;">
+                    Data Analyst
+                </a>
+                <a href="/interns?code=Data Engineer" class="text-black list-group-item list-group-item-action list-group-item-light p-3" style="font-size: small;">
+                    Data Engineer
+                </a>
+                <a href="/interns?code=Project Manager" class="text-black list-group-item list-group-item-action list-group-item-light p-3" style="font-size: small;">
+                    Project Manager
+                </a>
+                <a href="/interns?code=Business Analyst" class="text-black list-group-item list-group-item-action list-group-item-light p-3" style="font-size: small;">
+                    Business Analyst
+                </a>
+                <a href="/interns?code=Fullstack Developer" class="text-black list-group-item list-group-item-action list-group-item-light p-3" style="font-size: small;">
+                    Fullstack Developer
+                </a>
+                <a href="/interns?code=Game Developer" class="text-black list-group-item list-group-item-action list-group-item-light p-3" style="font-size: small;">
+                    Game Developer
+                </a>
+                <a href="/interns?code=DevOps Engineer" class="text-black list-group-item list-group-item-action list-group-item-light p-3" style="font-size: small;">
+                    DevOps Engineer
+                </a>
+                <a href="/interns?code=QA Engineer" class="text-black list-group-item list-group-item-action list-group-item-light p-3" style="font-size: small;">
+                    QA Engineer
+                </a>
+                <a href="/interns?code=IT Support" class="text-black list-group-item list-group-item-action list-group-item-light p-3" style="font-size: small;">
+                    IT Support
+                </a>
+                <a href="/interns?code=IT Consultant" class="text-black list-group-item list-group-item-action list-group-item-light p-3" style="font-size: small;">
+                    IT Consultant
+                </a>
+                <a href="/interns?code=IT Quality Assurance" class="text-black list-group-item list-group-item-action list-group-item-light p-3" style="font-size: small;">
+                    IT Quality Assurance
+                </a>
+                <a href="/interns?code=Artificial Intelligence Engineer" class="text-black list-group-item list-group-item-action list-group-item-light p-3" style="font-size: small;">
+                    Artificial Intelligence Engineer
+                </a>
+                <a href="/interns?code=Graphic Designer" class="text-black list-group-item list-group-item-action list-group-item-light p-3" style="font-size: small;">
+                    Graphic Designer
+                </a>
+                <a href="/interns?code=Lainnya" class="text-black list-group-item list-group-item-action list-group-item-light p-3" style="font-size: small;">
+                    Lainnya
+                </a>
+                <a href="/add-intern"><button type="button" class="btn btn-primary">Tambah Rekomendasi</button></a>
+            </div>
+        </div>
+        <!-- <div class="p-1 mt-4">
             <ul>
                 <li>
                     <a href="/interns?code=Frontend Developer" class="text-black" style="font-size: small;">
@@ -108,7 +171,7 @@
                     </a>
                 </li>
             </ul>
-        </div>
+        </div> -->
     </div>
 
     <div id="content" lass="p-4">
