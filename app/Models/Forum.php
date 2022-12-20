@@ -10,7 +10,6 @@ class Forum extends Model
     use HasFactory;
     protected $fillable = [
         'title',
-        'slug',
         'content',
         'user_id',
     ];

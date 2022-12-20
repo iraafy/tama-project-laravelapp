@@ -33,10 +33,13 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav ms-auto mb-2 mb-lg-0 gap-5">
                     <li class="nav-item">
-                        <a class="nav-link" href="/lecturer-dashboard">Dashboard</a>
+                        <a class="nav-link" href="/admin-dashboard">Dashboard</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/add-topic">Topic</a>
+                        <a class="nav-link" href="/add-user">Super Admin</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/add-intern">Internship</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="/forum">Forum</a>

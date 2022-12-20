@@ -4,7 +4,7 @@
 
 @section('content')
 
-<div class="container pt-2">
+<div class="container">
     <div class="row justify-content-center">
         <div class="p-4 col-lg col-sm-12 d-flex justify-content-center align-items-center">
             <img src="assets/img/register.png" width="85%" class="pt-5">
@@ -31,6 +31,7 @@
                     <input placeholder="Password" type="password" name="password" class="form-control" required>
                 </div>
                 <button type="submit" class="btn bg-color-primary text-white w-100 mt-3">Register</button>
+                <p class="text-center pt-3">Sudah punya akun? <a href="/login" class="text-color-primary">Login</a></p>
             </form>
         </div>
     </div>

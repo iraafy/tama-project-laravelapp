@@ -13,21 +13,34 @@
     </h1>
 
     <!-- Button trigger modal -->
-    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+    <button type="button" class="btn bg-color-primary text-white" style="width: 200px" data-bs-toggle="modal" data-bs-target="#exampleModal">
         Add Discussion
     </button>
     <div class="row mt-3">
         @foreach ($forum as $item)
-        <div class="card mb-3">
+        <div class="card mb-3 shadow">
             <div class="card-body">
-                <h5 class="card-title">
+                <div class="row">
+                    <div class="col">
+                        @foreach ($user as $userName)
+                        @if ($userName->id == $item->user_id)
+                        <img src="http://cdn.onlinewebfonts.com/svg/img_561543.png" alt="" width="20px">&nbsp; <b style="font-size: large; color:  #592C75;">{{ $userName->name }}</b>
+                        @endif
+                        @endforeach
+                    </div>
+                    <div class="col">
+                        <p style="font-size: small; text-align: right;">
+                            {{ $item->created_at->diffForHumans() }} <br>
+                        </p>
+                    </div>
+                </div>
+                <h5 class="card-title mt-3">
                     {{ $item->title }}
                 </h5>
                 <p class="card-text">
-                    {{ $item->created_at }} <br> <br>
                     {{ $item->content }}
                 </p>
-                <a href="/forums/{{ $item->id }}/view" class="btn btn-primary">Read More</a>
+                <a href="/forums/{{ $item->id }}/view">View Discussion</a>
             </div>
         </div>
         @endforeach
@@ -50,12 +63,6 @@
                                 <input type="text" class="form-control" name="title" placeholder="title">
                             </div>
                         </div>
-                        <div class="row mb-3">
-                            <label for="" class="col-sm-3 col-form-label">Slug</label>
-                            <div class="col-sm-9">
-                                <input type="text" class="form-control" name="slug" placeholder="Slug">
-                            </div>
-                        </div>
                         <input hidden type="text" class="form-control" name="user_id" value="{{ Auth::id() }}">
                         <div class="row mb-3">
                             <label for="" class="col-sm-3 col-form-label">Content</label>
@@ -66,7 +73,7 @@
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                        <button type="submit" class="btn btn-primary">Save changes</button>
+                        <button type="submit" class="btn bg-color-primary text-white">Save changes</button>
                     </div>
                 </form>
             </div>

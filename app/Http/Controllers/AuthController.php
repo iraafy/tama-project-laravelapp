@@ -15,6 +15,16 @@ class AuthController extends Controller
         return view('auth/login');
     }
 
+    public function lecturer_dashboard()
+    {
+        return view('lecturer_views/welcome');
+    }
+
+    public function admin_dashboard()
+    {
+        return view('admin_views/welcome');
+    }
+
     public function authenticating(Request $request)
     {
         $credentials = $request->validate([

@@ -14,11 +14,6 @@ class TopicController extends Controller
         return view('user_views/topics', ['topicList' => $topic]);
     }
 
-    public function lecturer_dashboard()
-    {
-        return view('lecturer_views/welcome');
-    }
-
     public function add_topic()
     {
         $topic = Topic::all();
