@@ -17,27 +17,28 @@
                     <label for="" class="col-sm-3 col-form-label">Role</label>
                     <div class="col-sm-9">
                         <!-- <input type="text" class="form-control" name="role" placeholder="Role"> -->
-                        <select name="role" id="role">
-                            <option value="Frontend Developer" selected>Frontend Developer</option>
-                            <option value="Backend Developer" selected>Backend Developer</option>
-                            <option value="UI/UX Designer" selected>UI/UX Designer</option>
-                            <option value="Mobile Developer" selected>Mobile Developer</option>
-                            <option value="Data Scientist" selected>Data Scientist</option>
-                            <option value="Data Analyst" selected>Data Analyst</option>
-                            <option value="Data Engineer" selected>Data Engineer</option>
-                            <option value="Project Manager" selected>Project Manager</option>
-                            <option value="Business Analyst" selected>Business Analyst</option>
-                            <option value="Fullstack Developer" selected>Fullstack Developer</option>
-                            <option value="Game Developer" selected>Game Developer</option>
-                            <option value="DevOps Engineer" selected>DevOps Engineer</option>
-                            <option value="QA Engineer" selected>QA Engineer</option>
-                            <option value="IT Support" selected>IT Support</option>
-                            <option value="IT Consultant" selected>IT Consultant</option>
-                            <option value="IT Quality Assurance" selected>IT Quality Assurance</option>
-                            <option value="Artificial Intelligence Engineer" selected>Artificial Intelligence Engineer</option>
-                            <option value="Graphic Designer" selected>Graphic Designer</option>
-                            <option value="Lainnya" selected>Lainnya</option>
-                        </select><br>
+                        <select name="role" id="role" class="form-control">
+                            <option disabled selected>Choose Role</option>
+                            <option value="Frontend Developer">Frontend Developer</option>
+                            <option value="Backend Developer">Backend Developer</option>
+                            <option value="UI/UX Designer">UI/UX Designer</option>
+                            <option value="Mobile Developer">Mobile Developer</option>
+                            <option value="Data Scientist">Data Scientist</option>
+                            <option value="Data Analyst">Data Analyst</option>
+                            <option value="Data Engineer">Data Engineer</option>
+                            <option value="Project Manager">Project Manager</option>
+                            <option value="Business Analyst">Business Analyst</option>
+                            <option value="Fullstack Developer">Fullstack Developer</option>
+                            <option value="Game Developer">Game Developer</option>
+                            <option value="DevOps Engineer">DevOps Engineer</option>
+                            <option value="QA Engineer">QA Engineer</option>
+                            <option value="IT Support">IT Support</option>
+                            <option value="IT Consultant">IT Consultant</option>
+                            <option value="IT Quality Assurance">IT Quality Assurance</option>
+                            <option value="Artificial Intelligence Engineer">Artificial Intelligence Engineer</option>
+                            <option value="Graphic Designer">Graphic Designer</option>
+                            <option value="Lainnya">Lainnya</option>
+                        </select>
                     </div>
                 </div>
                 <div class="row mb-3">
