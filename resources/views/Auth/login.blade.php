@@ -27,7 +27,9 @@
                 </div>
                 <button type="submit" name="login" class="btn bg-color-primary text-white w-100 mt-3">LOGIN</button>
             </form>
+            <p class ="text-center">Belum punya akun? <a href="">Register</a></p>
         </div>
+        
     </div>
     <br><br>
 </div>
