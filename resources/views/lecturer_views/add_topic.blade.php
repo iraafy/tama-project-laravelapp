@@ -14,23 +14,23 @@
             <form method="post" action="topic">
                 @csrf
                 <div class="row mb-3">
-                    <label for="" class="col-sm-3 col-form-label">Nama KBK</label>
+                    <label class="col-sm-3 col-form-label">Nama KBK</label>
                     <div class="col-sm-9">
-                        <select name="kbk" class="form-control">
-                            <option selected disabled>Choose...</option>
-                            <option value="Rekayasa Perangkat Lunak">Rekayasa Perangkat Lunak</option>
-                            <option value="Sistem Informasi">Sistem Informasi</option>
-                            <option value="Artificial Intelligent">Artificial Intelligent</option>
+                        <select id="kbkselect" name="kbk" class="form-control">
+                            <!-- <option selected disabled>Choose...</option> -->
                             <option value="Data">Data</option>
+                            <option value="RPL">Rekayasa Perangkat Lunak</option>
                             <option value="Multimedia">Multimedia</option>
+                            <option value="Artificial Intelligent">Artificial Intelligent</option>
                             <option value="Jaringan Komputer">Jaringan Komputer</option>
+                            <option value="Sistem Informasi">Sistem Informasi</option>
                         </select>
                     </div>
                 </div>
                 <div class="row mb-3">
-                    <label for="" class="col-sm-3 col-form-label">Kajian</label>
+                    <label class="col-sm-3 col-form-label">Kajian</label>
                     <div class="col-sm-9">
-                        <input type="text" class="form-control" name="kajian" placeholder="Kajian">
+                        <select id="kajianselect" name="kajian" class="form-control"></select>
                     </div>
                 </div>
                 <div class="row mb-3">
@@ -95,18 +95,19 @@
                                                 <input hidden type="text" class="form-control mb-3" name="id" id="id" value="{{ $topicData->id }}">
 
                                                 <label class="fw-bold pb-1" for="kbk">KBK</label>
-                                                <select name="kbk" class="form-control">
-                                                    <option value="Rekayasa Perangkat Lunak">Rekayasa Perangkat Lunak</option>
-                                                    <option value="Sistem Informasi">Sistem Informasi</option>
-                                                    <option value="Artificial Intelligent">Artificial Intelligent</option>
+                                                <select id="kbk2select" name="kbk" class="form-control">
+                                                    <!-- <option selected disabled>Choose...</option> -->
                                                     <option value="Data">Data</option>
+                                                    <option value="RPL">Rekayasa Perangkat Lunak</option>
                                                     <option value="Multimedia">Multimedia</option>
+                                                    <option value="Artificial Intelligent">Artificial Intelligent</option>
                                                     <option value="Jaringan Komputer">Jaringan Komputer</option>
+                                                    <option value="Sistem Informasi">Sistem Informasi</option>
                                                 </select>
                                                 <!-- value="{{ $topicData->kbk }}"> -->
 
                                                 <label class="fw-bold pb-1" for="kajian">Kajian</label>
-                                                <input type="text" class="form-control mb-3" name="kajian" id="kajian" value="{{ $topicData->kajian }}">
+                                                <select id="kajian2select" name="kajian" class="form-control"></select>
 
                                                 <label class="fw-bold pb-1" for="deskripsi_kajian">Deskripsi Kajian</label>
                                                 <input type="text" class="form-control mb-3" name="deskripsi_kajian" id="deskripsi_kajian" value="{{ $topicData->deskripsi_kajian }}">
@@ -157,13 +158,123 @@
     </div>
 </div>
 
-<script>
+<!-- <script>
     var myModal = document.getElementById('myModal')
     var myInput = document.getElementById('myInput')
 
     myModal.addEventListener('shown.bs.modal', function() {
         myInput.focus()
     })
+</script> -->
+
+<script>
+    const options2 = {
+        'Data': {
+            kajian2: ['Machine Learning', 'Big Data', 'Deep Learning']
+        },
+        'RPL': {
+            kajian2: ['Design Mobile App', 'Design Web App', 'Mobile Games']
+        },
+        'Multimedia': {
+            kajian2: ['Create AR', 'Create Logo', 'Photo Editing']
+        },
+        'Artificial Intelligent': {
+            kajian2: ['OpenCV', 'Image Classification', 'TensorFlow']
+        },
+        'Jaringan Komputer': {
+            kajian2: ['Arsitektur Jaringan Komputer', 'Topologi Jaringan', 'Tipe Jaringan Komputer']
+        },
+        'Sistem Informasi': {
+            kajian2: ['System Engineering', 'Information Management', 'Business Analytics']
+        }
+    }
+
+    function updatekajianByKbk2() {
+        kajian2select.innerHTML = "";
+        options2[kbk2select.value].kajian2.forEach(e => kajian2select.innerHTML += `<option value=${e}">${e}</option>`)
+    }
+    kbk2select.addEventListener('change', updatekajianByKbk2);
+    updatekajianByKbk2();
 </script>
+
+<script>
+    const options = {
+        'Data': {
+            kajian: ['Machine Learning', 'Big Data', 'Deep Learning']
+        },
+        'RPL': {
+            kajian: ['Design Mobile App', 'Web App', 'Mobile Games']
+        },
+        'Multimedia': {
+            kajian: ['Create AR', 'How To Make Logo', 'Photo Editing']
+        },
+        'Artificial Intelligent': {
+            kajian: ['OpenCV', 'Image Classification', 'TensorFlow']
+        },
+        'Jaringan Komputer': {
+            kajian: ['Arsitektur Jaringan Komputer', 'Topologi Jaringan', 'Tipe Jaringan Komputer']
+        },
+        'Sistem Informasi': {
+            kajian: ['System Engineering', 'Information Management', 'Business Analytics']
+        }
+    }
+
+    function updatekajianByKbk() {
+        kajianselect.innerHTML = "";
+        options[kbkselect.value].kajian.forEach(e => kajianselect.innerHTML += `<option value="${e}">${e}</option>`)
+    }
+    kbkselect.addEventListener('change', updatekajianByKbk);
+    updatekajianByKbk();
+</script>
+
+<!-- <script>
+    const dataOptions = ['Machine Learning', 'Big Data', 'Deep Learning'];
+    const rplOptions = ['Design Mobile App', 'Design Web App', 'Mobile Games'];
+    const mulmedOptions = ['Create AR', 'Create Logo', 'Photo Editing'];
+    const aiOptions = ['OpenCV', 'Image Classification', 'TensorFlow'];
+    const jarkomOptions = ['Arsitektur Jaringan Komputer', 'Topologi Jaringan', 'Tipe Jaringan Komputer'];
+    const siOptions = ['System Engineering', 'Information Management', 'Business Analytics'];
+
+    function updatekajianByKbk() {
+    kajianselect.innerHTML = "";
+    if (kbkselect.value == "Data") {
+        dataOptions.forEach(e => kajianselect.innerHTML += `<option value=${e}">${e}</option>`)
+    } else if(kbkselect.value == "RPL") {
+        rplOptions.forEach(e => kajianselect.innerHTML += `<option value=${e}">${e}</option>`)
+    }
+    else if(kbkselect.value == "Multimedia") {
+        mulmedOptions.forEach(e => kajianselect.innerHTML += `<option value=${e}">${e}</option>`)
+    }
+    else if(kbkselect.value == "Artificial Intelligent") {
+        aiOptions.forEach(e => kajianselect.innerHTML += `<option value=${e}">${e}</option>`)
+    }
+    else if(kbkselect.value == "Jaringan Komputer") {
+        jarkomOptions.forEach(e => kajianselect.innerHTML += `<option value=${e}">${e}</option>`)
+    }
+    else {
+        siOptions.forEach(e => kajianselect.innerHTML += `<option value=${e}">${e}</option>`)
+    }
+    }
+    kajianselect.addEventListener('change', updatekajianByKbk);
+    updatekajianByKbk();
+</script> -->
+
+<!-- <script>
+const toyotaOptions = ['MarkX', 'Avensis'];
+const nissanOptions = ['bluebird', 'Murano', 'Tiida'];
+
+function updateCarByBrand() {
+  carselect.innerHTML = "";
+  if (brandselect.value == "Toyota") {
+    toyotaOptions.forEach(e => carselect.innerHTML += `<option value=${e}">${e}</option>`)
+  } else {
+    nissanOptions.forEach(e => carselect.innerHTML += `<option value=${e}">${e}</option>`)
+  }
+}
+brandselect.addEventListener('change', updateCarByBrand);
+updateCarByBrand();
+</script> -->
+
+
 
 @endsection
