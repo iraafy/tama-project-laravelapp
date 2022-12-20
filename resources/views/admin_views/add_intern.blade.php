@@ -106,18 +106,20 @@
                         <td>{{ substr_replace($internData->description, "...", 30) }}</td>
                         <td>{{ substr_replace($internData->internship_period, "...", 30) }}</td>
                         <td>
-                            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#updateModal-{{ $internData->id }}">
+                            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#updateModal-{{ $internData->id }}">
                                 <iconify-icon inline icon="material-symbols:edit"></iconify-icon>
                             </button>
                             <!-- Modal -->
+                            <form action="update-intern/{{ $internData->id }}" method="post">
                             <div class="modal fade" id="updateModal-{{ $internData->id }}" tabindex="-1" aria-labelledby="deleteModalLabel" aria-hidden="true" role="dialog">
-                                <div class="modal-dialog modal-lg modal-dialog-scrollable" role="document">
+                                <div class="modal-dialog modal-dialog-scrollable" role="document">
                                     <div class="modal-content">
-                                        <div class="row">
-                                            <form action="update-intern/{{ $internData->id }}" method="post">
+                                        <!-- <div class="row"> -->
                                                 <div class="modal-header">
                                                     <h5 class="modal-title" id="updateModalLabel">Update Data</h5>
-                                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                        <span aria-hidden="true">&times;</span>
+                                                    </button>
                                                 </div>
                                                 <div class="modal-body">
                                                     @csrf
@@ -166,11 +168,11 @@
                                                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
                                                     <button type="submit" class="btn btn-primary">Save changes</button>
                                                 </div>
-                                            </form>
+                                                <!-- </div> -->
+                                            </div>
                                         </div>
                                     </div>
-                                </div>
-                            </div>
+                                </form>
 
                             <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#deleteModal-{{ $internData->id }}">
                                 <iconify-icon inline icon="ic:baseline-delete-forever"></iconify-icon>
