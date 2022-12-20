@@ -203,10 +203,10 @@
             kajian: ['Machine Learning', 'Big Data', 'Deep Learning']
         },
         'RPL': {
-            kajian: ['Design Mobile App', 'Design Web App', 'Mobile Games']
+            kajian: ['Design Mobile App', 'Web App', 'Mobile Games']
         },
         'Multimedia': {
-            kajian: ['Create AR', 'Create Logo', 'Photo Editing']
+            kajian: ['Create AR', 'How To Make Logo', 'Photo Editing']
         },
         'Artificial Intelligent': {
             kajian: ['OpenCV', 'Image Classification', 'TensorFlow']
@@ -221,7 +221,7 @@
 
     function updatekajianByKbk() {
         kajianselect.innerHTML = "";
-        options[kbkselect.value].kajian.forEach(e => kajianselect.innerHTML += `<option value=${e}">${e}</option>`)
+        options[kbkselect.value].kajian.forEach(e => kajianselect.innerHTML += `<option value="${e}">${e}</option>`)
     }
     kbkselect.addEventListener('change', updatekajianByKbk);
     updatekajianByKbk();

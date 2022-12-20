@@ -20,14 +20,14 @@
                                     Machine Learning
                                 </button>
                                 <div id="innercollapseOne" class="accordion-collapse collapse" aria-labelledby="innerheadingOne" data-bs-parent="#inneraccordion">
-                                    <div class="accordion-body row" style="padding-left: 20px;">
+                                    <div class="accordion-body pl-3" style="padding-left: 20px;">
                                 
                                         <ul>
                                             @foreach ($topicList as $topicData)
-                                            @if ($topicData->kbk == "Data")
+                                            @if ($topicData->kajian == "Machine")
                                             <li>
                                                 <a href="/topics?id_topic={{$topicData->id}}" class="text-black" style="font-size: small;">
-                                                    {{ $topicData->kajian }}
+                                                    {{ $topicData->deskripsi_kajian }}
                                                 </a>
                                             </li>
                                             @endif
@@ -39,14 +39,14 @@
                                     Big Data
                                 </button>	
                                 <div id="innercollapseOneB" class="accordion-collapse collapse" aria-labelledby="innerheadingOne" data-bs-parent="#inneraccordion">
-                                    <div class="accordion-body row" style="padding-left: 20px;">
+                                    <div class="accordion-body pl-3" style="padding-left: 20px;">
                                 
                                         <ul>
                                             @foreach ($topicList as $topicData)
-                                            @if ($topicData->kbk == "Data")
+                                            @if ($topicData->kajian == "Big")
                                             <li>
                                                 <a href="/topics?id_topic={{$topicData->id}}" class="text-black" style="font-size: small;">
-                                                    {{ $topicData->kajian }}
+                                                    {{ $topicData->deskripsi_kajian }}
                                                 </a>
                                             </li>
                                             @endif
@@ -58,14 +58,14 @@
                                     Deep Learning
                                 </button>	
                                 <div id="innercollapseOneC" class="accordion-collapse collapse" aria-labelledby="innerheadingOne" data-bs-parent="#inneraccordion">
-                                    <div class="accordion-body row" style="padding-left: 20px;">
+                                    <div class="accordion-body pl-3" style="padding-left: 20px;">
                                 
                                         <ul>
                                             @foreach ($topicList as $topicData)
-                                            @if ($topicData->kbk == "Data")
+                                            @if ($topicData->kajian == "Deep")
                                             <li>
                                                 <a href="/topics?id_topic={{$topicData->id}}" class="text-black" style="font-size: small;">
-                                                    {{ $topicData->kajian }}
+                                                    {{ $topicData->deskripsi_kajian }}
                                                 </a>
                                             </li>
                                             @endif
@@ -90,13 +90,13 @@
                                     Design Mobile App
                                 </button>
                                 <div id="#innercollapseOne" class="accordion-collapse collapse" aria-labelledby="innerheadingOne" data-bs-parent="#inneraccordion">
-                                    <div class="accordion-body row" style="padding-left: 20px;">
+                                    <div class="accordion-body pl-3" style="padding-left: 20px;">
                                         <ul>
                                             @foreach ($topicList as $topicData)
-                                            @if ($topicData->kbk == "RPL")
+                                            @if ($topicData->kajian == "RPL")
                                             <li>
                                                 <a href="/topics?id_topic={{$topicData->id}}" class="text-black" style="font-size: small;">
-                                                    {{ $topicData->kajian }}
+                                                    {{ $topicData->deskripsi_kajian }}
                                                 </a>
                                             </li>
                                             @endif
@@ -121,14 +121,14 @@
                                     Design Mobile App
                                 </button>
                                 <div id="innercollapseTwo" class="accordion-collapse collapse" aria-labelledby="innerheadingTwo" data-bs-parent="#inneraccordionTwo">
-                                    <div class="accordion-body row" style="padding-left: 20px;">
+                                    <div class="accordion-body pl-3" style="padding-left: 20px;">
                                 
                                         <ul>
                                             @foreach ($topicList as $topicData)
-                                            @if ($topicData->kbk == "RPL")
+                                            @if ($topicData->kajian == "Design")
                                             <li>
                                                 <a href="/topics?id_topic={{$topicData->id}}" class="text-black" style="font-size: small;">
-                                                    {{ $topicData->kajian }}
+                                                    {{ $topicData->deskripsi_kajian }}
                                                 </a>
                                             </li>
                                             @endif
@@ -137,17 +137,17 @@
                                     </div>
                                 </div>
                                 <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#innercollapseTwoB" aria-expanded="true" aria-controls="innercollapseTwo" style="padding-left: 30px">
-                                    Design Web App
+                                    Web App
                                 </button>	
                                 <div id="innercollapseTwoB" class="accordion-collapse collapse" aria-labelledby="innerheadingTwo" data-bs-parent="#inneraccordionTwo">
-                                    <div class="accordion-body row" style="padding-left: 20px;">
+                                    <div class="accordion-body pl-3" style="padding-left: 20px;">
                                 
                                         <ul>
                                             @foreach ($topicList as $topicData)
-                                            @if ($topicData->kbk == "RPL")
+                                            @if ($topicData->kajian == "Web")
                                             <li>
                                                 <a href="/topics?id_topic={{$topicData->id}}" class="text-black" style="font-size: small;">
-                                                    {{ $topicData->kajian }}
+                                                    {{ $topicData->deskripsi_kajian }}
                                                 </a>
                                             </li>
                                             @endif
@@ -159,14 +159,14 @@
                                     Mobile Games
                                 </button>	
                                 <div id="innercollapseTwoC" class="accordion-collapse collapse" aria-labelledby="innerheadingTwo" data-bs-parent="#inneraccordionTwo">
-                                    <div class="accordion-body row" style="padding-left: 20px;">
+                                    <div class="accordion-body pl-3" style="padding-left: 20px;">
                                 
                                         <ul>
                                             @foreach ($topicList as $topicData)
-                                            @if ($topicData->kbk == "RPL")
+                                            @if ($topicData->kajian == "Mobile")
                                             <li>
                                                 <a href="/topics?id_topic={{$topicData->id}}" class="text-black" style="font-size: small;">
-                                                    {{ $topicData->kajian }}
+                                                    {{ $topicData->deskripsi_kajian }}
                                                 </a>
                                             </li>
                                             @endif
@@ -188,16 +188,16 @@
                         <div class="accrodion-item" id="inneraccordionThree">
                             <div class="accordion" id="innerheadingThree">
                                 <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#innercollapseThree" aria-expanded="false" aria-controls="innercollapseThree" style="padding-left: 30px"									>
-                                    lorem
+                                    System Engineering
                                 </button>
                                 <div id="innercollapseThree" class="accordion-collapse collapse" aria-labelledby="innerheadingThree" data-bs-parent="#inneraccordionThree">
                                     <div class="accordion-body">
                                         <ul>
                                             @foreach ($topicList as $topicData)
-                                            @if ($topicData->kbk == "Sistem Informasi")
+                                            @if ($topicData->kajian == "System")
                                             <li>
                                                 <a href="/topics?id_topic={{$topicData->id}}" class="text-black" style="font-size: small;">
-                                                    {{ $topicData->kajian }}
+                                                    {{ $topicData->deskripsi_kajian }}
                                                 </a>
                                             </li>
                                             @endif
@@ -206,16 +206,16 @@
                                     </div>
                                 </div>
                                 <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#innercollapseThreeB" aria-expanded="true" aria-controls="innercollapseThree" style="padding-left: 30px">
-                                    lorem
+                                    Information Management
                                 </button>	
                                 <div id="innercollapseThreeB" class="accordion-collapse collapse" aria-labelledby="innerheadingThree" data-bs-parent="#inneraccordionThree">
-                                    <div class="accordion-body row" style="padding-left: 20px;">
+                                    <div class="accordion-body pl-3" style="padding-left: 20px;">
                                         <ul>
                                             @foreach ($topicList as $topicData)
-                                            @if ($topicData->kbk == "Sistem Informasi")
+                                            @if ($topicData->kajian == "Information")
                                             <li>
                                                 <a href="/topics?id_topic={{$topicData->id}}" class="text-black" style="font-size: small;">
-                                                    {{ $topicData->kajian }}
+                                                    {{ $topicData->deskripsi_kajian }}
                                                 </a>
                                             </li>
                                             @endif
@@ -224,16 +224,16 @@
                                     </div>
                                 </div>
                                 <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#innercollapseThreeC" aria-expanded="true" aria-controls="innercollapseThree" style="padding-left: 30px">
-                                    loren
+                                    Business Analytics
                                 </button>	
                                 <div id="innercollapseThreeC" class="accordion-collapse collapse" aria-labelledby="innerheadingThree" data-bs-parent="#inneraccordionThree">
-                                    <div class="accordion-body row" style="padding-left: 20px;">
+                                    <div class="accordion-body pl-3" style="padding-left: 20px;">
                                         <ul>
                                             @foreach ($topicList as $topicData)
-                                            @if ($topicData->kbk == "Sistem Informasi")
+                                            @if ($topicData->kajian == "Business")
                                             <li>
                                                 <a href="/topics?id_topic={{$topicData->id}}" class="text-black" style="font-size: small;">
-                                                    {{ $topicData->kajian }}
+                                                    {{ $topicData->deskripsi_kajian }}
                                                 </a>
                                             </li>
                                             @endif
@@ -255,10 +255,10 @@
                         <div class="accordion-body p-1">
                             <ul>
                                 @foreach ($topicList as $topicData)
-                                @if ($topicData->kbk == "Sistem Informasi")
+                                @if ($topicData->kajian == "Sistem Informasi")
                                 <li>
                                     <a href="/topics?id_topic={{$topicData->id}}" class="text-black" style="font-size: small;">
-                                        {{ $topicData->kajian }}
+                                        {{ $topicData->deskripsi_kajian }}
                                     </a>
                                 </li>
                                 @endif
@@ -277,10 +277,10 @@
                         <div class="accordion-body p-1">
                             <ul>
                                 @foreach ($topicList as $topicData)
-                                @if ($topicData->kbk == "Artificial Intelligent")
+                                @if ($topicData->kajian == "Artificial Intelligent")
                                 <li>
                                     <a href="/topics?id_topic={{$topicData->id}}" class="text-black" style="font-size: small;">
-                                        {{ $topicData->kajian }}
+                                        {{ $topicData->deskripsi_kajian }}
                                     </a>
                                 </li>
                                 @endif
@@ -305,10 +305,10 @@
                                     <div class="accordion-body">
                                         <ul>
                                             @foreach ($topicList as $topicData)
-                                            @if ($topicData->kbk == "Multimedia")
+                                            @if ($topicData->kajian == "Create")
                                             <li>
                                                 <a href="/topics?id_topic={{$topicData->id}}" class="text-black" style="font-size: small;">
-                                                    {{ $topicData->kajian }}
+                                                    {{ $topicData->deskripsi_kajian }}
                                                 </a>
                                             </li>
                                             @endif
@@ -317,16 +317,16 @@
                                     </div>
                                 </div>
                                 <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#innercollapseFiveB" aria-expanded="true" aria-controls="innercollapseFive" style="padding-left: 30px">
-                                    Create Logo
+                                    How To Make A Logo
                                 </button>	
                                 <div id="innercollapseFiveB" class="accordion-collapse collapse" aria-labelledby="innerheadingFive" data-bs-parent="#inneraccordionFive">
-                                    <div class="accordion-body row" style="padding-left: 20px;">
+                                    <div class="accordion-body pl-3" style="padding-left: 20px;">
                                         <ul>
                                             @foreach ($topicList as $topicData)
-                                            @if ($topicData->kbk == "Multimedia")
+                                            @if ($topicData->kajian == "How")
                                             <li>
                                                 <a href="/topics?id_topic={{$topicData->id}}" class="text-black" style="font-size: small;">
-                                                    {{ $topicData->kajian }}
+                                                    {{ $topicData->deskripsi_kajian }}
                                                 </a>
                                             </li>
                                             @endif
@@ -338,13 +338,13 @@
                                     Photo Editing
                                 </button>	
                                 <div id="innercollapseFiveC" class="accordion-collapse collapse" aria-labelledby="innerheadingFive" data-bs-parent="#inneraccordionFive">
-                                    <div class="accordion-body row" style="padding-left: 20px;">
+                                    <div class="accordion-body pl-3" style="padding-left: 20px;">
                                         <ul>
                                             @foreach ($topicList as $topicData)
-                                            @if ($topicData->kbk == "Multimedia")
+                                            @if ($topicData->kajian == "Photo")
                                             <li>
                                                 <a href="/topics?id_topic={{$topicData->id}}" class="text-black" style="font-size: small;">
-                                                    {{ $topicData->kajian }}
+                                                    {{ $topicData->deskripsi_kajian }}
                                                 </a>
                                             </li>
                                             @endif
@@ -372,10 +372,10 @@
                                     <div class="accordion-body">
                                         <ul>
                                             @foreach ($topicList as $topicData)
-                                            @if ($topicData->kbk == "Artificial Intelligent")
+                                            @if ($topicData->kajian == "OpenCV")
                                             <li>
                                                 <a href="/topics?id_topic={{$topicData->id}}" class="text-black" style="font-size: small;">
-                                                    {{ $topicData->kajian }}
+                                                    {{ $topicData->deskripsi_kajian }}
                                                 </a>
                                             </li>
                                             @endif
@@ -387,13 +387,13 @@
                                     Image Classification
                                 </button>	
                                 <div id="innercollapseSixB" class="accordion-collapse collapse" aria-labelledby="innerheadingSix" data-bs-parent="#inneraccordionSix">
-                                    <div class="accordion-body row" style="padding-left: 20px;">
+                                    <div class="accordion-body pl-3" style="padding-left: 20px;">
                                         <ul>
                                             @foreach ($topicList as $topicData)
-                                            @if ($topicData->kbk == "Artificial Intelligent")
+                                            @if ($topicData->kajian == "Image Classification")
                                             <li>
                                                 <a href="/topics?id_topic={{$topicData->id}}" class="text-black" style="font-size: small;">
-                                                    {{ $topicData->kajian }}
+                                                    {{ $topicData->deskripsi_kajian }}
                                                 </a>
                                             </li>
                                             @endif
@@ -405,13 +405,13 @@
                                     TensorFlow
                                 </button>	
                                 <div id="innercollapseSixC" class="accordion-collapse collapse" aria-labelledby="innerheadingSix" data-bs-parent="#inneraccordionSix">
-                                    <div class="accordion-body row" style="padding-left: 20px;">
+                                    <div class="accordion-body pl-3" style="padding-left: 20px;">
                                         <ul>
                                             @foreach ($topicList as $topicData)
-                                            @if ($topicData->kbk == "Artificial Intelligent")
+                                            @if ($topicData->kajian == "TensorFlow")
                                             <li>
                                                 <a href="/topics?id_topic={{$topicData->id}}" class="text-black" style="font-size: small;">
-                                                    {{ $topicData->kajian }}
+                                                    {{ $topicData->deskripsi_kajian }}
                                                 </a>
                                             </li>
                                             @endif
@@ -439,10 +439,10 @@
                                     <div class="accordion-body">
                                         <ul>
                                             @foreach ($topicList as $topicData)
-                                            @if ($topicData->kbk == "Jaringan Komputer")
+                                            @if ($topicData->kajian == "Arsitektur Jaringan Komputer")
                                             <li>
                                                 <a href="/topics?id_topic={{$topicData->id}}" class="text-black" style="font-size: small;">
-                                                    {{ $topicData->kajian }}
+                                                    {{ $topicData->deskripsi_kajian }}
                                                 </a>
                                             </li>
                                             @endif
@@ -454,13 +454,13 @@
                                     Topologi Jaringan
                                 </button>	
                                 <div id="innercollapseSevenB" class="accordion-collapse collapse" aria-labelledby="innerheadingSeven" data-bs-parent="#inneraccordionSeven">
-                                    <div class="accordion-body row" style="padding-left: 20px;">
+                                    <div class="accordion-body pl-3" style="padding-left: 20px;">
                                         <ul>
                                             @foreach ($topicList as $topicData)
-                                            @if ($topicData->kbk == "Jaringan Komputer")
+                                            @if ($topicData->kajian == "Topologi Jaringan")
                                             <li>
                                                 <a href="/topics?id_topic={{$topicData->id}}" class="text-black" style="font-size: small;">
-                                                    {{ $topicData->kajian }}
+                                                    {{ $topicData->deskripsi_kajian }}
                                                 </a>
                                             </li>
                                             @endif
@@ -472,13 +472,13 @@
                                     Tipe Jaringan Komputer
                                 </button>	
                                 <div id="innercollapseSevenC" class="accordion-collapse collapse" aria-labelledby="innerheadingSeven" data-bs-parent="#inneraccordionSeven">
-                                    <div class="accordion-body row" style="padding-left: 20px;">
+                                    <div class="accordion-body pl-3" style="padding-left: 20px;">
                                         <ul>
                                             @foreach ($topicList as $topicData)
-                                            @if ($topicData->kbk == "Jaringan Komputer")
+                                            @if ($topicData->kajian == "Tipe Jaringan Komputer")
                                             <li>
                                                 <a href="/topics?id_topic={{$topicData->id}}" class="text-black" style="font-size: small;">
-                                                    {{ $topicData->kajian }}
+                                                    {{ $topicData->deskripsi_kajian }}
                                                 </a>
                                             </li>
                                             @endif
@@ -507,11 +507,10 @@
             @if ($_GET['id_topic'] == $topicData['id'])
             <div class="row pe-4 mb-5 mt-3">
                 <h4>
-                    {{ $topicData['kajian'] }}
+                    {{ $topicData['deskripsi_kajian'] }}
                 </h4>
                 <p class="mt-2" style="text-align: justify">
-                    {{ $topicData['deskripsi_kajian'] }}
-                    {{ $topicData['content'] }}
+                    {!! $topicData['content'] !!}
                 </p>
             </div>
             @endif
