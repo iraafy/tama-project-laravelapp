@@ -18,7 +18,7 @@
                     <div class="col-sm-9">
                         <!-- <input type="text" class="form-control" name="role" placeholder="Role"> -->
                         <select name="role" id="role" class="form-control">
-                            <option disabled value="Choose Role" selected>Frontend Developer</option>
+                            <option disabled selected>Choose Role</option>
                             <option value="Frontend Developer">Frontend Developer</option>
                             <option value="Backend Developer">Backend Developer</option>
                             <option value="UI/UX Designer">UI/UX Designer</option>
