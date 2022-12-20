@@ -37,6 +37,7 @@
                             <option value="Artificial Intelligence Engineer" selected>Artificial Intelligence Engineer</option>
                             <option value="Graphic Designer" selected>Graphic Designer</option>
                             <option value="Lainnya" selected>Lainnya</option>
+                            <option hidden value="" selected>Pilih Role</option>
                         </select><br>
                     </div>
                 </div>
@@ -124,7 +125,7 @@
                                                 <div class="modal-body">
                                                     @csrf
                                                     <label class="fw-bold pb-1" for="role">Role</label>
-                                                    <select name="role" id="role">
+                                                    <select name="role" id="role" >
                                                         <option value="Frontend Developer" selected>Frontend Developer</option>
                                                         <option value="Backend Developer" selected>Backend Developer</option>
                                                         <option value="UI/UX Designer" selected>UI/UX Designer</option>
@@ -144,6 +145,7 @@
                                                         <option value="Artificial Intelligence Engineer" selected>Artificial Intelligence Engineer</option>
                                                         <option value="Graphic Designer" selected>Graphic Designer</option>
                                                         <option value="Lainnya" selected>Lainnya</option>
+                                                        <option hidden value="" selected>{{ $internData->role }}</option>
                                                     </select><br>
 
                                                     <label class="fw-bold pb-1" for="company_name">Nama Perusahaan</label>

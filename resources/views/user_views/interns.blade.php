@@ -199,9 +199,9 @@
                         </div>
                     </div>
                     <p class="mt-2">
-                        {{ $internData['description'] }} <br>
-                        {{ $internData['requirement'] }} <br>
-                        {{ $internData['url_information'] }}
+                        {{ $internData['description'] }} <br><br>
+                        {{ $internData['requirement'] }} <br><br>
+                        <a href="{{ $internData['url_information'] }}">Info Selengkapnya</a>
                     </p>
                     </p>
                 </div>
@@ -215,3 +215,11 @@
     </div>
 </div>
 @endsection
+
+<script>
+$(document).ready(function() {
+    $('[data-toggle=offcanvas]').click(function() {
+        $('.row-offcanvas').toggleClass('active');
+    });
+});
+</script>
