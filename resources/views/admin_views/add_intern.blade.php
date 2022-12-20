@@ -110,11 +110,10 @@
                                 <iconify-icon inline icon="material-symbols:edit"></iconify-icon>
                             </button>
                             <!-- Modal -->
-                            <div class="modal fade" id="updateModal-{{ $internData->id }}" tabindex="-1" aria-labelledby="deleteModalLabel" aria-hidden="true">
-                                <div class="modal-dialog modal-lg modal-dialog-scrollable">
+                            <div class="modal fade" id="updateModal-{{ $internData->id }}" tabindex="-1" aria-labelledby="deleteModalLabel" aria-hidden="true" role="dialog">
+                                <div class="modal-dialog modal-dialog-scrollable" role="document">
                                     <div class="modal-content">
                                         <div class="row">
-
                                             <form action="update-intern/{{ $internData->id }}" method="post">
                                                 <div class="modal-header">
                                                     <h5 class="modal-title" id="updateModalLabel">Update Data</h5>
@@ -123,7 +122,27 @@
                                                 <div class="modal-body">
                                                     @csrf
                                                     <label class="fw-bold pb-1" for="role">Role</label>
-                                                    <input type="text" class="form-control mb-3" name="role" id="role" value="{{ $internData->role }}">
+                                                    <select name="role" id="role">
+                                                        <option value="Frontend Developer" selected>Frontend Developer</option>
+                                                        <option value="Backend Developer" selected>Backend Developer</option>
+                                                        <option value="UI/UX Designer" selected>UI/UX Designer</option>
+                                                        <option value="Mobile Developer" selected>Mobile Developer</option>
+                                                        <option value="Data Scientist" selected>Data Scientist</option>
+                                                        <option value="Data Analyst" selected>Data Analyst</option>
+                                                        <option value="Data Engineer" selected>Data Engineer</option>
+                                                        <option value="Project Manager" selected>Project Manager</option>
+                                                        <option value="Business Analyst" selected>Business Analyst</option>
+                                                        <option value="Fullstack Developer" selected>Fullstack Developer</option>
+                                                        <option value="Game Developer" selected>Game Developer</option>
+                                                        <option value="DevOps Engineer" selected>DevOps Engineer</option>
+                                                        <option value="QA Engineer" selected>QA Engineer</option>
+                                                        <option value="IT Support" selected>IT Support</option>
+                                                        <option value="IT Consultant" selected>IT Consultant</option>
+                                                        <option value="IT Quality Assurance" selected>IT Quality Assurance</option>
+                                                        <option value="Artificial Intelligence Engineer" selected>Artificial Intelligence Engineer</option>
+                                                        <option value="Graphic Designer" selected>Graphic Designer</option>
+                                                        <option value="Lainnya" selected>Lainnya</option>
+                                                    </select><br>
 
                                                     <label class="fw-bold pb-1" for="company_name">Nama Perusahaan</label>
                                                     <input type="text" class="form-control mb-3" name="company_name" id="company_name" value="{{ $internData->company_name }}">
