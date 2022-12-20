@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Intern;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Session;
+use Illuminate\Support\Facades\Auth;
 
 class InternController extends Controller
 {
@@ -12,6 +13,12 @@ class InternController extends Controller
     {
         $intern = Intern::all();
         return view('user_views/interns', ['internList' => $intern]);
+    }
+
+    public function tes()
+    {
+        $auth = Auth::user()->id;
+        dd($auth);
     }
 
     public function admin_dashboard()

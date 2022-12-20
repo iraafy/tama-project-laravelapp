@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\User;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Session;
+use Illuminate\Support\Facades\Hash;
 use Illuminate\Http\Request;
 
 class AuthController extends Controller
@@ -24,7 +25,7 @@ class AuthController extends Controller
         if (Auth::attempt($credentials)) {
             $request->session()->regenerate();
 
-            return redirect()->intended('/');
+            return redirect('/');
         }
 
         Session::flash('status', 'failed');
@@ -40,18 +41,24 @@ class AuthController extends Controller
         $request->session()->regenerateToken();
         return redirect('/');
     }
-    public function register() {
+    public function register()
+    {
         return view('auth/register');
     }
 
-    public function postRegister(Request $request) {
+    public function postRegister(Request $request)
+    {
+        $user = new User;
+        $user->name = $request->name;
+        $user->email = $request->email;
+        $user->password = Hash::make($request->password);
+        $user->save();
 
-        User::create($request->all());
+        if ($user) {
+            Session::flash('status', 'add_success');
+            Session::flash('message', 'New Data Recorded, Login Now!');
+        }
 
-        // User::create([
-        //     'name' => $request->name,
-        //     'email' => $request->email,
-        //     'password' => bcrypt($request->password),
-        // ]);
+        return redirect('/register');
     }
 }
