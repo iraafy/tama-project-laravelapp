@@ -71,4 +71,11 @@ class InternController extends Controller
 
         return redirect('/add-intern');
     }
+
+    public function findInternBySlug($slug)
+    {
+        $role_intern = str_replace('-', ' ', $slug); // Mobile Developer
+        $intern = Intern::where('role', $role_intern)->get();
+        return view('admin_views/show_intern', ['interns' => $intern]);
+    }
 }

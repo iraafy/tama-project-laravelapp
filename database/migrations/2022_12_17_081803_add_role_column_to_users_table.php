@@ -15,7 +15,7 @@ return new class extends Migration
     {
         Schema::table('users', function (Blueprint $table) {
             $table->enum('role', ['Admin', 'Student', 'Lecturer'])->default('Student');
-            $table->dropColumn(['email_verified_at', 'remember_token', 'created_at', 'updated_at']);
+            // $table->dropColumn(['email_verified_at', 'remember_token', 'created_at', 'updated_at']);
         });
     }
 

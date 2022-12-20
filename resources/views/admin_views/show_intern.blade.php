@@ -116,36 +116,43 @@
                 &nbsp;Internship List
             </button>
             <div class="row pt-3">
-                @if (isset($_GET['code']))
-                    @foreach ($internList as $internData)
-                        @if ($_GET['code'] == $internData['role'])
-                            <div class="ps-5 pe-5">
-                                <div class="card shadow p-3">
-                                    <div class="row">
-                                        <div class="col">
-                                            <b>
-                                                {{ $internData['company_name'] }}
-                                            </b>
-                                            <p style="font-size: 14px">
-                                                {{ $internData['role'] }}
-                                            </p>
-                                        </div>
-                                        <div class="col" style="text-align: right; font-size: 13px">
-                                            {{ $internData['internship_period'] }}
-                                        </div>
-                                    </div>
-                                    <p class="mt-2">
-                                        {{ $internData['description'] }} <br>
-                                        {{ $internData['requirement'] }} <br>
-                                        {{ $internData['url_information'] }}
-                                    </p>
+                @foreach ($interns as $intern)
+                    <div class="ps-5 pe-5">
+                        <div class="card shadow p-3">
+                            <div class="row">
+                                <div class="col">
+                                    <b>
+                                        {{ $intern->company_name }}
+                                    </b>
+                                    <p style="font-size: 14px">
+                                        {{ $intern->role }}
                                     </p>
                                 </div>
+                                <div class="col" style="text-align: right; font-size: 13px">
+                                    {{ $intern->internship_period }}
+                                </div>
                             </div>
-                        @endif
-                    @endforeach
-                @else
-                    <h5 class="pt-3">Silahkan Pilih Role</h5>
+                            <p class="mt-2">
+                                {{ $intern->description }} <br>
+                                {{ $intern->requirement }} <br>
+                                <a href="{{ $intern->url_information }}">{{ $intern->url_information }}</a>
+
+                            </p>
+                        </div>
+                    </div>
+                @endforeach
+                @if (count($interns) == 0)
+                    <div class="ps-5 pe-5">
+                        <div class="card shadow p-3">
+                            <div class="row">
+                                <div class="col">
+                                    <b>
+                                        Tidak ada internship yang tersedia
+                                    </b>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 @endif
             </div>
         </div>

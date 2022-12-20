@@ -29,7 +29,6 @@ Route::get('/login', [AuthController::class, 'login'])->name('login')->middlewar
 Route::post('/login', [AuthController::class, 'authenticating'])->middleware('guest');
 Route::get('/logout', [AuthController::class, 'logout'])->middleware('auth');
 Route::get('/topics', [TopicController::class, 'index'])->middleware('auth');
-Route::get('/interns', [InternController::class, 'index'])->middleware('auth');
 Route::get('/forums', [ForumController::class, 'index'])->middleware('auth');
 Route::post('/add_forum', [ForumController::class, 'store'])->middleware('auth');
 Route::post('/add-comment', [ForumController::class, 'add_comment'])->middleware('auth');
@@ -38,10 +37,15 @@ Route::post('/forums/{forum}/view', [ForumController::class, 'post_comment'])->m
 Route::get('/lecturer-dashboard', [TopicController::class, 'lecturer_dashboard'])->middleware('auth');
 Route::get('/add-topic', [TopicController::class, 'add_topic'])->middleware('auth');
 Route::get('/table-topic', [TopicController::class, 'table_topic'])->middleware('auth');
-Route::get('/add-intern', [InternController::class, 'add_intern'])->middleware('auth');
 Route::post('/topic', [TopicController::class, 'store'])->middleware('auth');
-Route::post('/intern', [InternController::class, 'store'])->middleware('auth');
 Route::post('/update-topic/{id}', [TopicController::class, 'update_topic'])->middleware('auth');
 Route::delete('/destroy-topic/{id}', [TopicController::class, 'destroy'])->middleware('auth');
-Route::post('/update-intern/{id}', [InternController::class, 'update_intern'])->middleware('auth');
-Route::delete('/destroy-intern/{id}', [InternController::class, 'destroy'])->middleware('auth');
+
+Route::middleware('auth')->group(function () {
+    Route::post('/intern', [InternController::class, 'store']);
+    Route::delete('/destroy-intern/{id}', [InternController::class, 'destroy']);
+    Route::post('/update-intern/{id}', [InternController::class, 'update_intern']);
+    Route::get('/add-intern', [InternController::class, 'add_intern']);
+    Route::get('/interns', [InternController::class, 'index']);
+    Route::get('/interns/{slug}', [InternController::class, 'findInternBySlug']);
+});
