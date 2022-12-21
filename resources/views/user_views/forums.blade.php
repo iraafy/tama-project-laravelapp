@@ -1,4 +1,4 @@
-@extends('layouts.components')
+@extends('layouts.forum_navbar')
 
 @section('title', 'Forum')
 
