@@ -37,13 +37,35 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav ms-auto mb-2 mb-lg-0 gap-5">
+                    @if(Auth::user()->role == 'Lecturer')
                     <li class="nav-item">
-                        <a class="nav-link" href="index.php#about">About Us</a>
+                        <a class="nav-link" href="/lecturer-dashboard">Dashboard</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="index.php#feature">Our Feature</a>
+                        <a class="nav-link" href="/add-topic">Add Topic</a>
                     </li>
-                    @if(session()->has('login'))
+                    <li class="nav-item">
+                        <a class="nav-link" href="/forums">Forum</a>
+                    </li>
+                    
+                    <li class="nav-item">
+                        <a class="nav-link" href="/logout">
+                            <iconify-icon inline icon="clarity:logout-line" style="color: #592c75;"></iconify-icon> Logout
+                        </a>
+                    </li>
+                    @elseif(Auth::user()->role == 'Admin')
+                    <li class="nav-item">
+                        <a class="nav-link" href="/admin-dashboard">Dashboard</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/add-user">Super Admin</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/add-intern">Add Internship</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/forums">Forum</a>
+                    </li>
                     <li class="nav-item">
                         <a class="nav-link" href="/logout">
                             <iconify-icon inline icon="clarity:logout-line" style="color: #592c75;"></iconify-icon> Logout
@@ -51,8 +73,14 @@
                     </li>
                     @else
                     <li class="nav-item">
-                        <a class="nav-link" href="/login">
-                            <iconify-icon inline icon="clarity:login-line" style="color: #592c75;"></iconify-icon> Login
+                        <a class="nav-link" href="/#about">About Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/#feature">Our Feature</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/logout">
+                            <iconify-icon inline icon="clarity:logout-line" style="color: #592c75;"></iconify-icon> Logout
                         </a>
                     </li>
                     @endif
