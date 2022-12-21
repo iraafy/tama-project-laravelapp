@@ -105,6 +105,7 @@ Route::get('/add-user', [AuthController::class, 'add_user'])->middleware(['auth'
 Route::post('/user', [AuthController::class, 'store'])->middleware(['auth', 'admin-middleware']);
 Route::post('/update-user/{id}', [AuthController::class, 'update_user'])->middleware(['auth', 'admin-middleware']);
 Route::delete('/destroy-user/{id}', [AuthController::class, 'destroy'])->middleware(['auth', 'admin-middleware']);
+Route::post('/hide/{id}', [InternController::class, 'hide_intern'])->middleware(['auth', 'admin-middleware']);
 
 
 Route::get('/table-topic', [TopicController::class, 'table_topic'])->middleware('auth');

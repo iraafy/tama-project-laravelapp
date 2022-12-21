@@ -6,20 +6,22 @@ use App\Models\Intern;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Session;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\DB;
 
 class InternController extends Controller
 {
     public function index()
     {
-        $intern = Intern::all();
+        $intern = Intern::where('status', '1')->get();
+        // $intern = DB::table('intern')->where('status', 1);
         return view('user_views/interns', ['internList' => $intern]);
     }
 
-    public function tes()
-    {
-        $auth = Auth::user()->id;
-        dd($auth);
-    }
+    // public function tes()
+    // {
+    //     $auth = Auth::user()->id;
+    //     dd($auth);
+    // }
 
     public function admin_dashboard()
     {
@@ -55,6 +57,7 @@ class InternController extends Controller
         $intern->url_information = $request->url_information;
         $intern->internship_period = $request->internship_period;
         $intern->requirement = $request->requirement;
+        $intern->status = $request->status;
 
         $intern->save();
 
@@ -78,4 +81,5 @@ class InternController extends Controller
 
         return redirect('/add-intern');
     }
+
 }

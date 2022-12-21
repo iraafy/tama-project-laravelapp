@@ -165,6 +165,13 @@
 
                                                 <label class="fw-bold pb-1" for="requirement">Persyaratan Internship</label>
                                                 <textarea class="form-control" name="requirement" rows="6">{{ $internData->requirement }}</textarea>
+
+                                                <label class="fw-bold pb-1 mt-3" for="role">Status</label>
+                                                <select name="status" id="status" class="form-control">
+                                                    <option value="1">1</option>
+                                                    <option value="0">0</option>
+                                                    <option hidden value="" selected>{{ $internData->status }}</option>
+                                                </select>
                                             </div>
                                             <div class="modal-footer">
                                                 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
@@ -201,6 +208,7 @@
                                     </div>
                                 </div>
                             </div>
+                            
                         </td>
                     </tr>
                     @endforeach
