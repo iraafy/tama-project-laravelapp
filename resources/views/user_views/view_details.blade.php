@@ -45,7 +45,7 @@
         <div class="card mb-3 shadow pt-2 pb-2">
             <div class="card-body">
                 @foreach ($user as $userName)
-                @if ($userName->id == $forum->user_id)
+                @if ($userName->id == $commentData->user_id)
                 <img src="http://cdn.onlinewebfonts.com/svg/img_561543.png" alt="" width="20px">&nbsp; <b style="font-size: large; color:  #592C75;">{{ $userName->name }}</b>
                 @endif
                 @endforeach
