@@ -35,16 +35,16 @@
                     <li class="nav-item">
                         <a class="nav-link" href="/#feature">Our Feature</a>
                     </li>
-                    @if(session()->has('login'))
+                    @if (Auth::guest())
                     <li class="nav-item">
-                        <a class="nav-link" href="/logout">
-                            <iconify-icon inline icon="clarity:logout-line" style="color: #592c75;"></iconify-icon> Logout
+                        <a class="nav-link" href="/login">
+                            <iconify-icon inline icon="clarity:login-line" style="color: #592c75;"></iconify-icon> Login
                         </a>
                     </li>
                     @else
                     <li class="nav-item">
-                        <a class="nav-link" href="/login">
-                            <iconify-icon inline icon="clarity:login-line" style="color: #592c75;"></iconify-icon> Login
+                        <a class="nav-link" href="/logout">
+                            <iconify-icon inline icon="clarity:logout-line" style="color: #592c75;"></iconify-icon> Logout
                         </a>
                     </li>
                     @endif

@@ -107,7 +107,27 @@
                                                 <!-- value="{{ $topicData->kbk }}"> -->
 
                                                 <label class="fw-bold pb-1" for="kajian">Kajian</label>
-                                                <select id="kajian2select" name="kajian" class="form-control"></select>
+                                                <!-- <select id="kajian2select-{{ $topicData->id }}" name="kajian" class="form-control"></select> -->
+                                                <select name= "kajian" class="form-control">
+                                                    <option value="Machine Learning">Machine Learning</option>
+                                                    <option value="Big Data">Big Data</option>
+                                                    <option value="Deep Learning">Deep Learning</option>
+                                                    <option value="Design Mobile App">Design Mobile App</option>
+                                                    <option value="Web App">Web App</option>
+                                                    <option value="Mobile Games">Mobile Games</option>
+                                                    <option value="Create AR">Create AR</option>
+                                                    <option value="How To Make Logo">How To Make Logo</option>
+                                                    <option value="Photo Editing">Photo Editing</option>
+                                                    <option value="OpenCV">OpenCV</option>
+                                                    <option value="Image Classification">Image Classification</option>
+                                                    <option value="TensorFlow">TensorFlow</option>
+                                                    <option value="Arsitektur Jaringan Komputer">Arsitektur Jaringan Komputer</option>
+                                                    <option value="Topologi Jaringan">Topologi Jaringan</option>
+                                                    <option value="Tipe Jaringan Komputer">Tipe Jaringan Komputer</option>
+                                                    <option value="System Engineering">System Engineering</option>
+                                                    <option value="Information Management">Information Management</option>
+                                                    <option value="Business Analytics">Business Analytics</option>
+                                                </select>
 
                                                 <label class="fw-bold pb-1" for="deskripsi_kajian">Deskripsi Kajian</label>
                                                 <input type="text" class="form-control mb-3" name="deskripsi_kajian" id="deskripsi_kajian" value="{{ $topicData->deskripsi_kajian }}">
@@ -168,36 +188,6 @@
 </script> -->
 
 <script>
-    const options2 = {
-        'Data': {
-            kajian2: ['Machine Learning', 'Big Data', 'Deep Learning']
-        },
-        'RPL': {
-            kajian2: ['Design Mobile App', 'Design Web App', 'Mobile Games']
-        },
-        'Multimedia': {
-            kajian2: ['Create AR', 'Create Logo', 'Photo Editing']
-        },
-        'Artificial Intelligent': {
-            kajian2: ['OpenCV', 'Image Classification', 'TensorFlow']
-        },
-        'Jaringan Komputer': {
-            kajian2: ['Arsitektur Jaringan Komputer', 'Topologi Jaringan', 'Tipe Jaringan Komputer']
-        },
-        'Sistem Informasi': {
-            kajian2: ['System Engineering', 'Information Management', 'Business Analytics']
-        }
-    }
-
-    function updatekajianByKbk2() {
-        kajian2select.innerHTML = "";
-        options2[kbk2select.value].kajian2.forEach(e => kajian2select.innerHTML += `<option value=${e}">${e}</option>`)
-    }
-    kbk2select.addEventListener('change', updatekajianByKbk2);
-    updatekajianByKbk2();
-</script>
-
-<script>
     const options = {
         'Data': {
             kajian: ['Machine Learning', 'Big Data', 'Deep Learning']
@@ -227,53 +217,6 @@
     updatekajianByKbk();
 </script>
 
-<!-- <script>
-    const dataOptions = ['Machine Learning', 'Big Data', 'Deep Learning'];
-    const rplOptions = ['Design Mobile App', 'Design Web App', 'Mobile Games'];
-    const mulmedOptions = ['Create AR', 'Create Logo', 'Photo Editing'];
-    const aiOptions = ['OpenCV', 'Image Classification', 'TensorFlow'];
-    const jarkomOptions = ['Arsitektur Jaringan Komputer', 'Topologi Jaringan', 'Tipe Jaringan Komputer'];
-    const siOptions = ['System Engineering', 'Information Management', 'Business Analytics'];
-
-    function updatekajianByKbk() {
-    kajianselect.innerHTML = "";
-    if (kbkselect.value == "Data") {
-        dataOptions.forEach(e => kajianselect.innerHTML += `<option value=${e}">${e}</option>`)
-    } else if(kbkselect.value == "RPL") {
-        rplOptions.forEach(e => kajianselect.innerHTML += `<option value=${e}">${e}</option>`)
-    }
-    else if(kbkselect.value == "Multimedia") {
-        mulmedOptions.forEach(e => kajianselect.innerHTML += `<option value=${e}">${e}</option>`)
-    }
-    else if(kbkselect.value == "Artificial Intelligent") {
-        aiOptions.forEach(e => kajianselect.innerHTML += `<option value=${e}">${e}</option>`)
-    }
-    else if(kbkselect.value == "Jaringan Komputer") {
-        jarkomOptions.forEach(e => kajianselect.innerHTML += `<option value=${e}">${e}</option>`)
-    }
-    else {
-        siOptions.forEach(e => kajianselect.innerHTML += `<option value=${e}">${e}</option>`)
-    }
-    }
-    kajianselect.addEventListener('change', updatekajianByKbk);
-    updatekajianByKbk();
-</script> -->
-
-<!-- <script>
-const toyotaOptions = ['MarkX', 'Avensis'];
-const nissanOptions = ['bluebird', 'Murano', 'Tiida'];
-
-function updateCarByBrand() {
-  carselect.innerHTML = "";
-  if (brandselect.value == "Toyota") {
-    toyotaOptions.forEach(e => carselect.innerHTML += `<option value=${e}">${e}</option>`)
-  } else {
-    nissanOptions.forEach(e => carselect.innerHTML += `<option value=${e}">${e}</option>`)
-  }
-}
-brandselect.addEventListener('change', updateCarByBrand);
-updateCarByBrand();
-</script> -->
 
 
 

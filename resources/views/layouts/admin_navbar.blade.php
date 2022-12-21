@@ -39,10 +39,10 @@
                         <a class="nav-link" href="/add-user">Super Admin</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/add-intern">Internship</a>
+                        <a class="nav-link" href="/add-intern">Add Internship</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/forum">Forum</a>
+                        <a class="nav-link" href="/forums">Forum</a>
                     </li>
                     @if (Auth::guest())
                     <li class="nav-item">

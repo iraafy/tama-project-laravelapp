@@ -24,7 +24,7 @@
                                 
                                         <ul>
                                             @foreach ($topicList as $topicData)
-                                            @if ($topicData->kajian == "Machine")
+                                            @if ($topicData->kajian == "Machine Learning")
                                             <li>
                                                 <a href="/topics?id_topic={{$topicData->id}}" class="text-black" style="font-size: small;">
                                                     {{ $topicData->deskripsi_kajian }}
@@ -43,7 +43,7 @@
                                 
                                         <ul>
                                             @foreach ($topicList as $topicData)
-                                            @if ($topicData->kajian == "Big")
+                                            @if ($topicData->kajian == "Big Data")
                                             <li>
                                                 <a href="/topics?id_topic={{$topicData->id}}" class="text-black" style="font-size: small;">
                                                     {{ $topicData->deskripsi_kajian }}
@@ -62,7 +62,7 @@
                                 
                                         <ul>
                                             @foreach ($topicList as $topicData)
-                                            @if ($topicData->kajian == "Deep")
+                                            @if ($topicData->kajian == "Deep Learning")
                                             <li>
                                                 <a href="/topics?id_topic={{$topicData->id}}" class="text-black" style="font-size: small;">
                                                     {{ $topicData->deskripsi_kajian }}
@@ -77,37 +77,7 @@
                         </div>
                     </div>
                 </div>
-                <!-- <div class="accordion-item" id="accordion">
-                    <h2 class="accordion-header" id="headingOne">
-                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                            Rekayasa Perangkat Lunak
-                        </button>
-                    </h2>
-                    <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#accordion">
-                        <div class="accrodion-item" id="inneraccordion">
-                            <div class="accordion" id="innerheadingOne">
-                                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#innercollapseOne" aria-expanded="true" aria-controls="innercollapseOne">
-                                    Design Mobile App
-                                </button>
-                                <div id="#innercollapseOne" class="accordion-collapse collapse" aria-labelledby="innerheadingOne" data-bs-parent="#inneraccordion">
-                                    <div class="accordion-body pl-3" style="padding-left: 20px;">
-                                        <ul>
-                                            @foreach ($topicList as $topicData)
-                                            @if ($topicData->kajian == "RPL")
-                                            <li>
-                                                <a href="/topics?id_topic={{$topicData->id}}" class="text-black" style="font-size: small;">
-                                                    {{ $topicData->deskripsi_kajian }}
-                                                </a>
-                                            </li>
-                                            @endif
-                                            @endforeach
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div> -->
+                
                 <div class="accordion-item" id="accordionTwo">
                     <h2 class="accordion-header" id="headingTwo">
                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
@@ -125,7 +95,7 @@
                                 
                                         <ul>
                                             @foreach ($topicList as $topicData)
-                                            @if ($topicData->kajian == "Design")
+                                            @if ($topicData->kajian == "Design Mobile App")
                                             <li>
                                                 <a href="/topics?id_topic={{$topicData->id}}" class="text-black" style="font-size: small;">
                                                     {{ $topicData->deskripsi_kajian }}
@@ -144,7 +114,7 @@
                                 
                                         <ul>
                                             @foreach ($topicList as $topicData)
-                                            @if ($topicData->kajian == "Web")
+                                            @if ($topicData->kajian == "Web App")
                                             <li>
                                                 <a href="/topics?id_topic={{$topicData->id}}" class="text-black" style="font-size: small;">
                                                     {{ $topicData->deskripsi_kajian }}
@@ -163,7 +133,7 @@
                                 
                                         <ul>
                                             @foreach ($topicList as $topicData)
-                                            @if ($topicData->kajian == "Mobile")
+                                            @if ($topicData->kajian == "Mobile Games")
                                             <li>
                                                 <a href="/topics?id_topic={{$topicData->id}}" class="text-black" style="font-size: small;">
                                                     {{ $topicData->deskripsi_kajian }}
@@ -194,7 +164,7 @@
                                     <div class="accordion-body">
                                         <ul>
                                             @foreach ($topicList as $topicData)
-                                            @if ($topicData->kajian == "System")
+                                            @if ($topicData->kajian == "System Engineering")
                                             <li>
                                                 <a href="/topics?id_topic={{$topicData->id}}" class="text-black" style="font-size: small;">
                                                     {{ $topicData->deskripsi_kajian }}
@@ -212,7 +182,7 @@
                                     <div class="accordion-body pl-3" style="padding-left: 20px;">
                                         <ul>
                                             @foreach ($topicList as $topicData)
-                                            @if ($topicData->kajian == "Information")
+                                            @if ($topicData->kajian == "Information Management")
                                             <li>
                                                 <a href="/topics?id_topic={{$topicData->id}}" class="text-black" style="font-size: small;">
                                                     {{ $topicData->deskripsi_kajian }}
@@ -230,7 +200,7 @@
                                     <div class="accordion-body pl-3" style="padding-left: 20px;">
                                         <ul>
                                             @foreach ($topicList as $topicData)
-                                            @if ($topicData->kajian == "Business")
+                                            @if ($topicData->kajian == "Business Analytics")
                                             <li>
                                                 <a href="/topics?id_topic={{$topicData->id}}" class="text-black" style="font-size: small;">
                                                     {{ $topicData->deskripsi_kajian }}
@@ -245,50 +215,7 @@
                         </div>
                     </div>
                 </div>
-                <!-- <div class="accordion-item">
-                    <h2 class="accordion-header" id="flush-headingTwo">
-                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
-                            Sistem Informasi
-                        </button>
-                    </h2>
-                    <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
-                        <div class="accordion-body p-1">
-                            <ul>
-                                @foreach ($topicList as $topicData)
-                                @if ($topicData->kajian == "Sistem Informasi")
-                                <li>
-                                    <a href="/topics?id_topic={{$topicData->id}}" class="text-black" style="font-size: small;">
-                                        {{ $topicData->deskripsi_kajian }}
-                                    </a>
-                                </li>
-                                @endif
-                                @endforeach
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <div class="accordion-item">
-                    <h2 class="accordion-header" id="flush-headingThree">
-                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
-                            Artificial Intelligent
-                        </button>
-                    </h2>
-                    <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
-                        <div class="accordion-body p-1">
-                            <ul>
-                                @foreach ($topicList as $topicData)
-                                @if ($topicData->kajian == "Artificial Intelligent")
-                                <li>
-                                    <a href="/topics?id_topic={{$topicData->id}}" class="text-black" style="font-size: small;">
-                                        {{ $topicData->deskripsi_kajian }}
-                                    </a>
-                                </li>
-                                @endif
-                                @endforeach
-                            </ul>
-                        </div>
-                    </div>
-                </div> -->
+                
                 <div class="accordion-item" id="accordionFive">
                     <h2 class="accordion-header" id="headingFive">
                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
@@ -305,7 +232,7 @@
                                     <div class="accordion-body">
                                         <ul>
                                             @foreach ($topicList as $topicData)
-                                            @if ($topicData->kajian == "Create")
+                                            @if ($topicData->kajian == "Create AR")
                                             <li>
                                                 <a href="/topics?id_topic={{$topicData->id}}" class="text-black" style="font-size: small;">
                                                     {{ $topicData->deskripsi_kajian }}
@@ -323,7 +250,7 @@
                                     <div class="accordion-body pl-3" style="padding-left: 20px;">
                                         <ul>
                                             @foreach ($topicList as $topicData)
-                                            @if ($topicData->kajian == "How")
+                                            @if ($topicData->kajian == "How To Make Logo")
                                             <li>
                                                 <a href="/topics?id_topic={{$topicData->id}}" class="text-black" style="font-size: small;">
                                                     {{ $topicData->deskripsi_kajian }}
@@ -341,7 +268,7 @@
                                     <div class="accordion-body pl-3" style="padding-left: 20px;">
                                         <ul>
                                             @foreach ($topicList as $topicData)
-                                            @if ($topicData->kajian == "Photo")
+                                            @if ($topicData->kajian == "Photo Editing")
                                             <li>
                                                 <a href="/topics?id_topic={{$topicData->id}}" class="text-black" style="font-size: small;">
                                                     {{ $topicData->deskripsi_kajian }}

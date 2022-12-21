@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\User;
+use Closure;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Session;
 use Illuminate\Support\Facades\Hash;
@@ -35,8 +36,17 @@ class AuthController extends Controller
         if (Auth::attempt($credentials)) {
             $request->session()->regenerate();
 
-            return redirect('/');
+            if (Auth::user()->role == 'Lecturer'){
+                return redirect('/lecturer-dashboard');
+            }
+            else if (Auth::user()->role == 'Admin') {
+                return redirect('/admin-dashboard');
+            }
+            else {
+                return redirect('/');
+            }
         }
+
 
         Session::flash('status', 'failed');
         Session::flash('message', 'Login Failed!');

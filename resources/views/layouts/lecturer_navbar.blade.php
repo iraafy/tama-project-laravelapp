@@ -36,10 +36,10 @@
                         <a class="nav-link" href="/lecturer-dashboard">Dashboard</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/add-topic">Topic</a>
+                        <a class="nav-link" href="/add-topic">Add Topic</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/forum">Forum</a>
+                        <a class="nav-link" href="/forums">Forum</a>
                     </li>
                     @if (Auth::guest())
                     <li class="nav-item">
