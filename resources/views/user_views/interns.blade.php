@@ -65,7 +65,6 @@
                 <a href="/interns?code=Lainnya" class="text-black list-group-item list-group-item-action list-group-item-light p-3" style="font-size: small;">
                     Lainnya
                 </a>
-                <!-- <a href="/add-intern"><button type="button" class="btn btn-primary">Tambah Rekomendasi</button></a> -->
             </div>
         </div>
         <!-- <div class="p-1 mt-4">
@@ -217,9 +216,9 @@
 @endsection
 
 <script>
-$(document).ready(function() {
-    $('[data-toggle=offcanvas]').click(function() {
-        $('.row-offcanvas').toggleClass('active');
-    });
-});
+// $(document).ready(function() {
+//     $('[data-toggle=offcanvas]').click(function() {
+//         $('.row-offcanvas').toggleClass('active');
+//     });
+// });
 </script>
