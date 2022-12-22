@@ -89,7 +89,7 @@
         </div>
 
         <div class="row p-3 mt-5">
-            <table class="table">
+            <table id="table" class="table table-striped" style="width:100%">
                 <thead>
                     <tr>
                         <th>Role</th>
@@ -107,108 +107,110 @@
                         <td>{{ substr_replace($internData->description, "...", 30) }}</td>
                         <td>{{ substr_replace($internData->internship_period, "...", 30) }}</td>
                         <td>
-                            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#updateModal-{{ $internData->id }}">
-                                <iconify-icon inline icon="material-symbols:edit"></iconify-icon>
-                            </button>
-                            <!-- Modal -->
-                            <form action="update-intern/{{ $internData->id }}" method="post">
-                                <div class="modal fade" id="updateModal-{{ $internData->id }}" tabindex="-1" aria-labelledby="deleteModalLabel" aria-hidden="true" role="dialog">
-                                    <div class="modal-dialog modal-dialog-scrollable" role="document">
-                                        <div class="modal-content">
-                                            <!-- <div class="row"> -->
-                                            <div class="modal-header">
-                                                <h5 class="modal-title" id="updateModalLabel">Update Data</h5>
-                                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                                    <span aria-hidden="true">&times;</span>
-                                                </button>
+                            <div class="row">
+                                <div class="col-md-auto">
+                                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#updateModal-{{ $internData->id }}">
+                                        <iconify-icon inline icon="material-symbols:edit"></iconify-icon>
+                                    </button>
+                                    <!-- Modal -->
+                                    <form action="update-intern/{{ $internData->id }}" method="post">
+                                        <div class="modal fade" id="updateModal-{{ $internData->id }}" tabindex="-1" aria-labelledby="deleteModalLabel" aria-hidden="true" role="dialog">
+                                            <div class="modal-dialog modal-dialog-scrollable" role="document">
+                                                <div class="modal-content">
+                                                    <div class="modal-header">
+                                                        <h5 class="modal-title" id="updateModalLabel">Update Data</h5>
+                                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                            <span aria-hidden="true">&times;</span>
+                                                        </button>
+                                                    </div>
+                                                    <div class="modal-body">
+                                                        @csrf
+                                                        <label class="fw-bold pb-1" for="role">Role</label>
+                                                        <select name="role" id="role" class="form-control">
+                                                            <option value="Frontend Developer">Frontend Developer</option>
+                                                            <option value="Backend Developer">Backend Developer</option>
+                                                            <option value="UI/UX Designer">UI/UX Designer</option>
+                                                            <option value="Mobile Developer">Mobile Developer</option>
+                                                            <option value="Data Scientist">Data Scientist</option>
+                                                            <option value="Data Analyst">Data Analyst</option>
+                                                            <option value="Data Engineer">Data Engineer</option>
+                                                            <option value="Project Manager">Project Manager</option>
+                                                            <option value="Business Analyst">Business Analyst</option>
+                                                            <option value="Fullstack Developer">Fullstack Developer</option>
+                                                            <option value="Game Developer">Game Developer</option>
+                                                            <option value="DevOps Engineer">DevOps Engineer</option>
+                                                            <option value="QA Engineer">QA Engineer</option>
+                                                            <option value="IT Support">IT Support</option>
+                                                            <option value="IT Consultant">IT Consultant</option>
+                                                            <option value="IT Quality Assurance">IT Quality Assurance</option>
+                                                            <option value="Artificial Intelligence Engineer">Artificial Intelligence Engineer</option>
+                                                            <option value="Graphic Designer">Graphic Designer</option>
+                                                            <option value="Lainnya">Lainnya</option>
+                                                            <option hidden value="" selected>{{ $internData->role }}</option>
+                                                        </select><br>
+        
+                                                        <label class="fw-bold pb-1" for="company_name">Nama Perusahaan</label>
+                                                        <input type="text" class="form-control mb-3" name="company_name" id="company_name" value="{{ $internData->company_name }}">
+        
+                                                        <label class="fw-bold pb-1" for="description">Deskripsi Internship</label>
+                                                        <textarea class="form-control" name="description" rows="6">{{ $internData->description }}</textarea>
+        
+                                                        <label class="fw-bold pb-1" for="company_address">Alamat Perusahaan</label>
+                                                        <input type="text" class="form-control mb-3" name="company_address" id="company_address" value="{{ $internData->company_address }}">
+        
+                                                        <label class="fw-bold pb-1" for="url_information">URL Information</label>
+                                                        <input type="text" class="form-control mb-3" name="url_information" id="url_information" value="{{ $internData->url_information }}">
+        
+                                                        <label class="fw-bold pb-1" for="internship_period">Periode</label>
+                                                        <input type="text" class="form-control mb-3" name="internship_period" id="internship_period" value="{{ $internData->internship_period }}">
+        
+                                                        <label class="fw-bold pb-1" for="requirement">Persyaratan Internship</label>
+                                                        <textarea class="form-control" name="requirement" rows="6">{{ $internData->requirement }}</textarea>
+        
+                                                        <label class="fw-bold pb-1 mt-3" for="role">Status</label>
+                                                        <select name="status" id="status" class="form-control">
+                                                            <option value="1">1</option>
+                                                            <option value="0">0</option>
+                                                            <option hidden value="" selected>{{ $internData->status }}</option>
+                                                        </select>
+                                                    </div>
+                                                    <div class="modal-footer">
+                                                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                                        <button type="submit" class="btn btn-primary">Save changes</button>
+                                                    </div>
+                                                </div>
                                             </div>
-                                            <div class="modal-body">
-                                                @csrf
-                                                <label class="fw-bold pb-1" for="role">Role</label>
-                                                <select name="role" id="role" class="form-control">
-                                                    <option value="Frontend Developer">Frontend Developer</option>
-                                                    <option value="Backend Developer">Backend Developer</option>
-                                                    <option value="UI/UX Designer">UI/UX Designer</option>
-                                                    <option value="Mobile Developer">Mobile Developer</option>
-                                                    <option value="Data Scientist">Data Scientist</option>
-                                                    <option value="Data Analyst">Data Analyst</option>
-                                                    <option value="Data Engineer">Data Engineer</option>
-                                                    <option value="Project Manager">Project Manager</option>
-                                                    <option value="Business Analyst">Business Analyst</option>
-                                                    <option value="Fullstack Developer">Fullstack Developer</option>
-                                                    <option value="Game Developer">Game Developer</option>
-                                                    <option value="DevOps Engineer">DevOps Engineer</option>
-                                                    <option value="QA Engineer">QA Engineer</option>
-                                                    <option value="IT Support">IT Support</option>
-                                                    <option value="IT Consultant">IT Consultant</option>
-                                                    <option value="IT Quality Assurance">IT Quality Assurance</option>
-                                                    <option value="Artificial Intelligence Engineer">Artificial Intelligence Engineer</option>
-                                                    <option value="Graphic Designer">Graphic Designer</option>
-                                                    <option value="Lainnya">Lainnya</option>
-                                                    <option hidden value="" selected>{{ $internData->role }}</option>
-                                                </select><br>
-
-                                                <label class="fw-bold pb-1" for="company_name">Nama Perusahaan</label>
-                                                <input type="text" class="form-control mb-3" name="company_name" id="company_name" value="{{ $internData->company_name }}">
-
-                                                <label class="fw-bold pb-1" for="description">Deskripsi Internship</label>
-                                                <textarea class="form-control" name="description" rows="6">{{ $internData->description }}</textarea>
-
-                                                <label class="fw-bold pb-1" for="company_address">Alamat Perusahaan</label>
-                                                <input type="text" class="form-control mb-3" name="company_address" id="company_address" value="{{ $internData->company_address }}">
-
-                                                <label class="fw-bold pb-1" for="url_information">URL Information</label>
-                                                <input type="text" class="form-control mb-3" name="url_information" id="url_information" value="{{ $internData->url_information }}">
-
-                                                <label class="fw-bold pb-1" for="internship_period">Periode</label>
-                                                <input type="text" class="form-control mb-3" name="internship_period" id="internship_period" value="{{ $internData->internship_period }}">
-
-                                                <label class="fw-bold pb-1" for="requirement">Persyaratan Internship</label>
-                                                <textarea class="form-control" name="requirement" rows="6">{{ $internData->requirement }}</textarea>
-
-                                                <label class="fw-bold pb-1 mt-3" for="role">Status</label>
-                                                <select name="status" id="status" class="form-control">
-                                                    <option value="1">1</option>
-                                                    <option value="0">0</option>
-                                                    <option hidden value="" selected>{{ $internData->status }}</option>
-                                                </select>
-                                            </div>
-                                            <div class="modal-footer">
-                                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                                                <button type="submit" class="btn btn-primary">Save changes</button>
-                                            </div>
-                                            <!-- </div> -->
                                         </div>
-                                    </div>
+                                    </form>
                                 </div>
-                            </form>
-
-                            <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#deleteModal-{{ $internData->id }}">
-                                <iconify-icon inline icon="ic:baseline-delete-forever"></iconify-icon>
-                            </button>
-                            <!-- Modal -->
-                            <div class="modal fade" id="deleteModal-{{ $internData->id }}" tabindex="-1" aria-labelledby="deleteModalLabel" aria-hidden="true">
-                                <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
-                                    <div class="modal-content">
-                                        <div class="modal-header">
-                                            <h5 class="modal-title" id="deleteModalLabel">{{ $internData->role }} - {{ $internData->company_name }}</h5>
-                                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                                        </div>
-                                        <div class="modal-body pt-3 pb-3">
-                                            Are you sure want to delete this intern?
-                                        </div>
-                                        <div class="modal-footer">
-                                            <form action="/destroy-intern/{{ $internData->id }}" method="post">
-                                                @csrf
-                                                @method('DELETE')
-                                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
-                                                <button type="submit" class="btn btn-danger">Delete</button>
-                                            </form>
+                                <div class="col-md-auto">
+                                    <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#deleteModal-{{ $internData->id }}">
+                                        <iconify-icon inline icon="ic:baseline-delete-forever"></iconify-icon>
+                                    </button>
+                                    <!-- Modal -->
+                                    <div class="modal fade" id="deleteModal-{{ $internData->id }}" tabindex="-1" aria-labelledby="deleteModalLabel" aria-hidden="true">
+                                        <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
+                                            <div class="modal-content">
+                                                <div class="modal-header">
+                                                    <h5 class="modal-title" id="deleteModalLabel">{{ $internData->role }} - {{ $internData->company_name }}</h5>
+                                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                                </div>
+                                                <div class="modal-body pt-3 pb-3">
+                                                    Are you sure want to delete this intern?
+                                                </div>
+                                                <div class="modal-footer">
+                                                    <form action="/destroy-intern/{{ $internData->id }}" method="post">
+                                                        @csrf
+                                                        @method('DELETE')
+                                                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                                                        <button type="submit" class="btn btn-danger">Delete</button>
+                                                    </form>
+                                                </div>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                            
                         </td>
                     </tr>
                     @endforeach
@@ -226,5 +228,15 @@
         myInput.focus()
     })
 </script>
+
+<script>
+    $(document).ready(function () {
+        $('#table').DataTable();
+    });
+</script>
+
+<script type="text/javascript" src="https://code.jquery.com/jquery-3.5.1.js"></script>
+<script type="text/javascript" src="https://cdn.datatables.net/1.13.1/js/jquery.dataTables.min.js"></script>
+<script type="text/javascript" src="https://cdn.datatables.net/1.13.1/js/dataTables.bootstrap5.min.js"></script>
 
 @endsection
