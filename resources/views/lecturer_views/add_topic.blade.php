@@ -59,9 +59,20 @@
         </div>
 
         <div class="row p-3 mt-5">
+            <div class="row">
+                <div class="col-md-6">
+                    <form action="/add-topic/search" method="GET">
+                        <div class="input-group mb-3">
+                            <input type="text" class="form-control" placeholder="Search..." name="search">
+                            <button class="btn btn-primary" type="submit" id="">Search</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
             <table class="table">
                 <thead>
                     <tr>
+                        <th>ID</th>
                         <th>KBK</th>
                         <th>Kajian</th>
                         <th>Deskripsi Kajian</th>
@@ -72,6 +83,7 @@
                 <tbody>
                     @foreach ($topicList as $topicData)
                     <tr>
+                        <td>{{ $topicData->id }}</td>
                         <td>{{ $topicData->kbk }}</td>
                         <td>{{ substr_replace($topicData->kajian, "...", 30) }}</td>
                         <td>{{ substr_replace($topicData->deskripsi_kajian, "...", 30) }}</td>
@@ -97,36 +109,36 @@
                                                 <label class="fw-bold pb-1" for="kbk">KBK</label>
                                                 <select id="kbk2select" name="kbk" class="form-control">
                                                     <!-- <option selected disabled>Choose...</option> -->
-                                                    <option value="Data">Data</option>
-                                                    <option value="RPL">Rekayasa Perangkat Lunak</option>
-                                                    <option value="Multimedia">Multimedia</option>
-                                                    <option value="Artificial Intelligent">Artificial Intelligent</option>
-                                                    <option value="Jaringan Komputer">Jaringan Komputer</option>
-                                                    <option value="Sistem Informasi">Sistem Informasi</option>
+                                                    <option value="Data" <?php if($topicData->kbk=="Data") echo 'selected="selected"'; ?> >Data</option>
+                                                    <option value="RPL" <?php if($topicData->kbk=="RPL") echo 'selected="selected"'; ?> >Rekayasa Perangkat Lunak</option>
+                                                    <option value="Multimedia" <?php if($topicData->kbk=="Multimedia") echo 'selected="selected"'; ?> >Multimedia</option>
+                                                    <option value="Artificial Intelligent" <?php if($topicData->kbk=="Artificial Intelligent") echo 'selected="selected"'; ?> >Artificial Intelligent</option>
+                                                    <option value="Jaringan Komputer" <?php if($topicData->kbk=="Jaringan Komputer") echo 'selected="selected"'; ?> >Jaringan Komputer</option>
+                                                    <option value="Sistem Informasi" <?php if($topicData->kbk=="Sistem Informasi") echo 'selected="selected"'; ?> >Sistem Informasi</option>
                                                 </select>
                                                 <!-- value="{{ $topicData->kbk }}"> -->
 
                                                 <label class="fw-bold pb-1" for="kajian">Kajian</label>
                                                 <!-- <select id="kajian2select-{{ $topicData->id }}" name="kajian" class="form-control"></select> -->
                                                 <select name= "kajian" class="form-control">
-                                                    <option value="Machine Learning">Machine Learning</option>
-                                                    <option value="Big Data">Big Data</option>
-                                                    <option value="Deep Learning">Deep Learning</option>
-                                                    <option value="Design Mobile App">Design Mobile App</option>
-                                                    <option value="Web App">Web App</option>
-                                                    <option value="Mobile Games">Mobile Games</option>
-                                                    <option value="Create AR">Create AR</option>
-                                                    <option value="How To Make Logo">How To Make Logo</option>
-                                                    <option value="Photo Editing">Photo Editing</option>
-                                                    <option value="OpenCV">OpenCV</option>
-                                                    <option value="Image Classification">Image Classification</option>
-                                                    <option value="TensorFlow">TensorFlow</option>
-                                                    <option value="Arsitektur Jaringan Komputer">Arsitektur Jaringan Komputer</option>
-                                                    <option value="Topologi Jaringan">Topologi Jaringan</option>
-                                                    <option value="Tipe Jaringan Komputer">Tipe Jaringan Komputer</option>
-                                                    <option value="System Engineering">System Engineering</option>
-                                                    <option value="Information Management">Information Management</option>
-                                                    <option value="Business Analytics">Business Analytics</option>
+                                                    <option value="Machine Learning" <?php if($topicData->kajian=="Machine Learning") echo 'selected="selected"'; ?> >Machine Learning</option>
+                                                    <option value="Big Data" <?php if($topicData->kajian=="Big Data") echo 'selected="selected"'; ?> >Big Data</option>
+                                                    <option value="Deep Learning" <?php if($topicData->kajian=="Deep Learning") echo 'selected="selected"'; ?> >Deep Learning</option>
+                                                    <option value="Design Mobile App" <?php if($topicData->kajian=="Design Mobile App") echo 'selected="selected"'; ?> >Design Mobile App</option>
+                                                    <option value="Web App" <?php if($topicData->kajian=="Web App") echo 'selected="selected"'; ?> >Web App</option>
+                                                    <option value="Mobile Games" <?php if($topicData->kajian=="Mobile Games") echo 'selected="selected"'; ?> >Mobile Games</option>
+                                                    <option value="Create AR" <?php if($topicData->kajian=="Create AR") echo 'selected="selected"'; ?> >Create AR</option>
+                                                    <option value="How To Make Logo" <?php if($topicData->kajian=="How To Make Logo") echo 'selected="selected"'; ?> >How To Make Logo</option>
+                                                    <option value="Photo Editing" <?php if($topicData->kajian=="Photo Editing") echo 'selected="selected"'; ?> >Photo Editing</option>
+                                                    <option value="OpenCV" <?php if($topicData->kajian=="OpenCV") echo 'selected="selected"'; ?> >OpenCV</option>
+                                                    <option value="Image Classification" <?php if($topicData->kajian=="Image Classification") echo 'selected="selected"'; ?> >Image Classification</option>
+                                                    <option value="TensorFlow" <?php if($topicData->kajian=="TensorFlow") echo 'selected="selected"'; ?> >TensorFlow</option>
+                                                    <option value="Arsitektur Jaringan Komputer" <?php if($topicData->kajian=="Arsitektur Jaringan Komputer") echo 'selected="selected"'; ?> >Arsitektur Jaringan Komputer</option>
+                                                    <option value="Topologi Jaringan" <?php if($topicData->kajian=="Topologi Jaringan") echo 'selected="selected"'; ?> >Topologi Jaringan</option>
+                                                    <option value="Tipe Jaringan Komputer" <?php if($topicData->kajian=="Tipe Jaringan Komputer") echo 'selected="selected"'; ?> >Tipe Jaringan Komputer</option>
+                                                    <option value="System Engineering" <?php if($topicData->kajian=="System Engineering") echo 'selected="selected"'; ?> >System Engineering</option>
+                                                    <option value="Information Management" <?php if($topicData->kajian=="Information Management") echo 'selected="selected"'; ?>>Information Management</option>
+                                                    <option value="Business Analytics" <?php if($topicData->kajian=="Business Analytics") echo 'selected="selected"'; ?> >Business Analytics</option>
                                                 </select>
 
                                                 <label class="fw-bold pb-1" for="deskripsi_kajian">Deskripsi Kajian</label>
@@ -174,6 +186,7 @@
                     @endforeach
                 </tbody>
             </table>
+            {{ $topicList->links() }}
         </div>
     </div>
 </div>

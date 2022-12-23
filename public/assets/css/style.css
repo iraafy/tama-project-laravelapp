@@ -12,6 +12,12 @@ body{
   content: counter(my-sec-counter) ". ";
 }
 
+#myBtn {
+  width: 10%;
+  margin-left: 14px;
+  margin-top: 15px;
+}
+
 a {
     text-decoration: none !important;
 }

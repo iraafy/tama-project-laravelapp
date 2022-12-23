@@ -5,7 +5,8 @@
 @section('content')
 <div class="wrappers">
     <div id="sidebar">
-        <div class="mt-3 pt-4">
+        <div class="mt-4 pt-4">
+            <h4 class="mt-4 text-center">Topik</h4>
             <div class="accordion m-3" id="accordion">
                 <div class="accordion-item" id="accordion">
                     <h2 class="accordion-header" id="headingOne">
@@ -421,27 +422,32 @@
         </div>
     </div>
 
-    <div id="content" lass="p-4">
+    <div id="content" class="p-4 m-4">
         <button class="btn btn-outline-secondary hidden-btn mt-2 mb-4 ps-4 pe-4" id="sidebarBtn" type="button" data-toggle="collapse" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="iconify-inline" data-icon="cil:menu"></span>
             &nbsp;Topik
         </button>
 
-        <div class="row">
+        <div class="row shadow mb-5 bg-white rounded p-3">
             <br><br>
             @if (isset($_GET['id_topic']))
             @foreach ($topicList as $topicData)
             @if ($_GET['id_topic'] == $topicData['id'])
-            <div class="row pe-4 mb-5 mt-3">
+            <div class="row pe-4 mt-3">
                 <h4>
                     {{ $topicData['deskripsi_kajian'] }}
                 </h4>
-                <p class="mt-2" style="text-align: justify">
+                
+                <div id="less">
+                    {!! Str::limit ($topicData['content'], 2500, '...') !!}
+                </div>
+            </div>
+            <div id="more">
                     {!! $topicData['content'] !!}
-                </p>
             </div>
             @endif
             @endforeach
+            <button id="myBtn" onclick="myFunction()" class="btn btn-outline-primary btn-sm" >Read More</button>
             @else
             <h5 class="pt-3">Silahkan Pilih Topik</h5>
             @endif
@@ -456,5 +462,28 @@
     });
 
     });
+</script>
+
+<script>
+
+    const lessText = document.getElementById("less")
+    const moreText = document.getElementById("more")
+    let myBtn = document.getElementById("myBtn")
+
+    lessText.style.display = "inline";
+    moreText.style.display = "none";
+
+    function myFunction(){
+        if (lessText.style.display == "inline") {
+            lessText.style.display = "none"
+            moreText.style.display = "inline"
+            myBtn.innerHTML = "Show Less"
+        }
+        else {
+            lessText.style.display = "inline"
+            moreText.style.display = "none"
+            myBtn.innerHTML = "Read More"
+        }
+    }
 </script>
 @endsection
