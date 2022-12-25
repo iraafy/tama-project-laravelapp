@@ -41,7 +41,19 @@
                             <iconify-icon inline icon="clarity:login-line" style="color: #592c75;"></iconify-icon> Login
                         </a>
                     </li>
+                    @elseif (Auth::user()->role == 'Lecturer')
+                    <li class="nav-item">
+                        <a class="nav-link" href="/lecturer-dashboard">Dashboard</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/logout">
+                            <iconify-icon inline icon="clarity:logout-line" style="color: #592c75;"></iconify-icon> Logout
+                        </a>
+                    </li>
                     @else
+                    <li class="nav-item">
+                        <a class="nav-link" href="/admin-dashboard">Dashboard</a>
+                    </li>
                     <li class="nav-item">
                         <a class="nav-link" href="/logout">
                             <iconify-icon inline icon="clarity:logout-line" style="color: #592c75;"></iconify-icon> Logout

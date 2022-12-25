@@ -89,14 +89,21 @@
                         <td>{{ substr_replace($topicData->deskripsi_kajian, "...", 30) }}</td>
                         <td>{{ substr_replace($topicData->content, "...", 30) }}</td>
                         <td>
-                            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#updateModal-{{ $topicData->id }}">
-                                <iconify-icon inline icon="material-symbols:edit"></iconify-icon>
-                            </button>
+                            <div class="row justify-content-center">
+                                <div class="col" align="center">
+                                    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#updateModal-{{ $topicData->id }}">
+                                        <iconify-icon inline icon="material-symbols:edit"></iconify-icon>
+                                    </button>
+                                    <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#deleteModal-{{ $topicData->id }}">
+                                        <iconify-icon inline icon="ic:baseline-delete-forever"></iconify-icon>
+                                    </button>
+                                </div>
+                            </div>
                             <!-- Modal -->
-                            <div class="modal fade" id="updateModal-{{ $topicData->id }}" tabindex="-1" aria-labelledby="deleteModalLabel" aria-hidden="true">
-                                <div class="modal-dialog modal-lg modal-dialog-scrollable">
-                                    <div class="modal-content">
-                                        <form action="update-topic/{{ $topicData->id }}" method="post">
+                            <form action="update-topic/{{ $topicData->id }}" method="post">
+                                <div class="modal fade" id="updateModal-{{ $topicData->id }}" tabindex="-1" aria-labelledby="deleteModalLabel" aria-hidden="true">
+                                    <div class="modal-dialog modal-lg modal-dialog-scrollable" role="document">
+                                        <div class="modal-content">
                                             <div class="modal-header">
                                                 <h5 class="modal-title" id="updateModalLabel">Update Data</h5>
                                                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
@@ -142,23 +149,25 @@
                                                 </select>
 
                                                 <label class="fw-bold pb-1" for="deskripsi_kajian">Deskripsi Kajian</label>
-                                                <input type="text" class="form-control mb-3" name="deskripsi_kajian" id="deskripsi_kajian" value="{{ $topicData->deskripsi_kajian }}">
+                                                <input type="text" class="form-control mb-3" name="deskripsi_kajian" id="deskripsi_kajian" value="{{ old( 'deskripsi_kajian' , $topicData->deskripsi_kajian) }}">
 
                                                 <label class="fw-bold pb-1" for="content">Content</label>
+
+                                                <!-- <input id="content" type="hidden" name="content" value="{{ $topicData->content }}">
+                                                <trix-editor input="content"></trix-editor> -->
                                                 <textarea class="form-control" name="content" rows="6">{{ $topicData->content }}</textarea>
+
                                             </div>
                                             <div class="modal-footer">
                                                 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
                                                 <button type="submit" class="btn btn-primary">Save changes</button>
                                             </div>
-                                        </form>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
+                            </form>
 
-                            <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#deleteModal-{{ $topicData->id }}">
-                                <iconify-icon inline icon="ic:baseline-delete-forever"></iconify-icon>
-                            </button>
+                           
                             <!-- Modal -->
                             <div class="modal fade" id="deleteModal-{{ $topicData->id }}" tabindex="-1" aria-labelledby="deleteModalLabel" aria-hidden="true">
                                 <div class="modal-dialog modal-lg modal-dialog-scrollable">

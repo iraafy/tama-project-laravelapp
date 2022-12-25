@@ -445,9 +445,13 @@
             <div id="more">
                     {!! $topicData['content'] !!}
             </div>
+            @if (strlen($topicData['content']) <= 2500)
+                <button id="myBtn" onclick="myFunction()" class="btn btn-outline-primary btn-sm" style="visibility: hidden;" >Read More</button>
+            @else
+                <button id="myBtn" onclick="myFunction()" class="btn btn-outline-primary btn-sm" style="visibility: visible;" >Read More</button>
+            @endif
             @endif
             @endforeach
-            <button id="myBtn" onclick="myFunction()" class="btn btn-outline-primary btn-sm" >Read More</button>
             @else
             <h5 class="pt-3">Silahkan Pilih Topik</h5>
             @endif
@@ -472,6 +476,7 @@
 
     lessText.style.display = "inline";
     moreText.style.display = "none";
+    
 
     function myFunction(){
         if (lessText.style.display == "inline") {
