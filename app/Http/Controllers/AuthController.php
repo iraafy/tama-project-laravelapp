@@ -8,6 +8,7 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Session;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class AuthController extends Controller
 {
@@ -84,7 +85,7 @@ class AuthController extends Controller
 
     public function add_user()
     {
-        $user = User::all();
+        $user = user::where('status', 'active')->get();
         return view('admin_views/add_user', ['userList' => $user]);
     }
 
