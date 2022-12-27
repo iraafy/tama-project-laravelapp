@@ -10,10 +10,12 @@ use Illuminate\Support\Facades\Session;
 
 class ForumController extends Controller
 {
-    public function index()
+    public function index(Request $request)
     {
-        $forum = Forum::orderBy('created_at', 'desc')->paginate(1000);
         $user = User::all();
+        $keyword = $request->keyword;
+        $forum = Forum::where('title', 'LIKE', '%' . $keyword . '%')->orderBy('created_at', 'desc')->paginate(5);
+
         return view('user_views/forums', compact(['forum', 'user']));
     }
 

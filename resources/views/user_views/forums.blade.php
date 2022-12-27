@@ -1,22 +1,24 @@
-@extends('layouts.forum_navbar')
+@extends('layouts.components')
 
 @section('title', 'Forum')
 
 @section('content')
-<h2 align="center" style="color: white;">
-    <b>Online Chat</b>
-</h2>
-<br>
-<div class="container">
+<div class="container mt-3">
     <h1 class="text-color-primary fw-bold text-center p-5">
         Forum Diskusi<br> <span class="text-black-50 fs-4 fw-normal"></span>
     </h1>
-
-    <!-- Button trigger modal -->
-    <button type="button" class="btn bg-color-primary text-white" style="width: 200px" data-bs-toggle="modal" data-bs-target="#exampleModal">
-        Add Discussion
-    </button>
-    <div class="row mt-3">
+    <a class="floating" data-bs-toggle="modal" data-bs-target="#exampleModal" style="cursor: pointer;">
+        <iconify-icon inline icon="material-symbols:add" class="my-floating"></iconify-icon>
+    </a>
+    <form action="" method="get">
+        <div class="form-group row">
+            <div class="col-sm-11 p-0 m-0">
+                <input type="text" name="keyword" class="form-control" placeholder="Search by title">
+            </div>
+            <button type="submit" class="col-sm-1 btn bg-color-primary text-white">Search</button>
+        </div>
+    </form>
+    <div class="row mt-4">
         @foreach ($forum as $item)
         <div class="card mb-3 shadow">
             <div class="card-body">
@@ -45,13 +47,16 @@
         </div>
         @endforeach
     </div>
+    <div class="mt-4 mb-5" style="float: right;">
+        {{ $forum->withQueryString()->links() }}
+    </div>
 
     <!-- Modal -->
     <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-lg">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                    <h5 class="modal-title" id="exampleModalLabel">Tambah Diskusi Baru</h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <form method="post" action="add_forum">
