@@ -53,7 +53,7 @@
         </div>
         <div class="card shadow p-3" >
             <div class="row p-3 md-5">
-            <caption text-align="center"><h3>Data Admin</h3></caption>
+            <div class="a"><h3>Data Admin</h3></div>
                 <table class="table" style="width:100%">
                     <thead>
                         <tr style="height:10px">

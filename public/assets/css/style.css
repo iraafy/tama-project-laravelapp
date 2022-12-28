@@ -200,3 +200,7 @@ a {
         display: block !important;
     }
 }
+
+div.a{
+  text-align: center;
+}
