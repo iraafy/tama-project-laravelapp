@@ -439,13 +439,13 @@
                 </h4>
                 
                 <div id="less">
-                    {!! Str::limit ($topicData['content'], 2500, '...') !!}
+                    {!! Str::limit ($topicData['content'], 4000, '...') !!}
                 </div>
             </div>
             <div id="more">
                     {!! $topicData['content'] !!}
             </div>
-            @if (strlen($topicData['content']) <= 2500)
+            @if (strlen($topicData['content']) <= 4000)
                 <button id="myBtn" onclick="myFunction()" class="btn btn-outline-primary btn-sm" style="visibility: hidden;" >Read More</button>
             @else
                 <button id="myBtn" onclick="myFunction()" class="btn btn-outline-primary btn-sm" style="visibility: visible;" >Read More</button>

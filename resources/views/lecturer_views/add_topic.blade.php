@@ -58,9 +58,9 @@
             </form>
         </div>
 
-        <div class="row p-3 mt-5">
+        <div class="row mt-5">
             <div class="row">
-                <div class="col-md-6">
+                <div class="col-md-4">
                     <form action="/add-topic/search" method="GET">
                         <div class="input-group mb-3">
                             <input type="text" class="form-control" placeholder="Search..." name="search" value="{{ request('search') }}">
@@ -72,7 +72,6 @@
             <table class="table">
                 <thead>
                     <tr>
-                        <th>ID</th>
                         <th>KBK</th>
                         <th>Kajian</th>
                         <th>Deskripsi Kajian</th>
@@ -83,11 +82,10 @@
                 <tbody>
                     @foreach ($topicList as $topicData)
                     <tr>
-                        <td>{{ $topicData->id }}</td>
-                        <td>{{ $topicData->kbk }}</td>
-                        <td>{{ substr_replace($topicData->kajian, "...", 30) }}</td>
-                        <td>{{ substr_replace($topicData->deskripsi_kajian, "...", 30) }}</td>
-                        <td>{{ substr_replace($topicData->content, "...", 30) }}</td>
+                        <td style="width: 20%;">{{ $topicData->kbk }}</td>
+                        <td style="width: 18%;">{{ substr_replace($topicData->kajian, "...", 30) }}</td>
+                        <td style="width: 18%;">{{ substr_replace($topicData->deskripsi_kajian, "...", 30) }}</td>
+                        <td style="width: 32%;">{{ substr_replace($topicData->content, "...", 50) }}</td>
                         <td>
                             <div class="row justify-content-center">
                                 <div class="col" align="center">
@@ -152,10 +150,10 @@
                                                 <input type="text" class="form-control mb-3" name="deskripsi_kajian" id="deskripsi_kajian" value="{{ old( 'deskripsi_kajian' , $topicData->deskripsi_kajian) }}">
 
                                                 <label class="fw-bold pb-1" for="content">Content</label>
-
-                                                <!-- <input id="content" type="hidden" name="content" value="{{ $topicData->content }}">
-                                                <trix-editor input="content"></trix-editor> -->
-                                                <textarea class="form-control" name="content" rows="6">{{ $topicData->content }}</textarea>
+                                                
+                                                <input id="konten-{{ $topicData->id }}" type="hidden" name="content" value="{!! old('content', $topicData->content) !!}">
+                                                <trix-editor input="konten-{{ $topicData->id }}"></trix-editor>
+                                                
 
                                             </div>
                                             <div class="modal-footer">
