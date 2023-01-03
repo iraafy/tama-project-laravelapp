@@ -47,12 +47,6 @@
                     <li class="nav-item">
                         <a class="nav-link" href="/forums">Forum</a>
                     </li>
-                    
-                    <li class="nav-item">
-                        <a class="nav-link" href="/logout">
-                            <iconify-icon inline icon="clarity:logout-line" style="color: #592c75;"></iconify-icon> Logout
-                        </a>
-                    </li>
                     @elseif(Auth::user()->role == 'Admin')
                     <li class="nav-item">
                         <a class="nav-link" href="/admin-dashboard">Dashboard</a>
@@ -66,24 +60,19 @@
                     <li class="nav-item">
                         <a class="nav-link" href="/forums">Forum</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="/logout">
-                            <iconify-icon inline icon="clarity:logout-line" style="color: #592c75;"></iconify-icon> Logout
-                        </a>
-                    </li>
-                    @else
+                    @elseif (Auth::user()->role == 'Student')
                     <li class="nav-item">
                         <a class="nav-link" href="/#about">About Us</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="/#feature">Our Feature</a>
                     </li>
+                    @endif
                     <li class="nav-item">
                         <a class="nav-link" href="/logout">
                             <iconify-icon inline icon="clarity:logout-line" style="color: #592c75;"></iconify-icon> Logout
                         </a>
                     </li>
-                    @endif
                 </ul>
             </div>
         </div>

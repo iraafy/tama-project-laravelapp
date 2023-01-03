@@ -1,9 +1,9 @@
-@extends('layouts.components')
+@extends('layouts.forum_navbar')
 
 @section('title', 'Forum')
 
 @section('content')
-<div class="container mt-3">
+<div class="container mt-3 p-4">
     <h1 class="text-color-primary fw-bold text-center p-5">
         Forum Diskusi<br> <span class="text-black-50 fs-4 fw-normal"></span>
     </h1>
@@ -47,7 +47,7 @@
         </div>
         @endforeach
     </div>
-    <div class="mt-4 mb-5" style="float: right;">
+    <div class="mt-4 mb-5">
         {{ $forum->withQueryString()->links() }}
     </div>
 

@@ -59,6 +59,12 @@
                             <iconify-icon inline icon="clarity:logout-line" style="color: #592c75;"></iconify-icon> Logout
                         </a>
                     </li>
+                    @elseif (Auth::user()->role == 'Student')
+                    <li class="nav-item">
+                        <a class="nav-link" href="/logout">
+                            <iconify-icon inline icon="clarity:logout-line" style="color: #592c75;"></iconify-icon> Logout
+                        </a>
+                    </li>
                     @endif
                 </ul>
             </div>

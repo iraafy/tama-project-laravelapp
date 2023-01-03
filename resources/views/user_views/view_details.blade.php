@@ -3,7 +3,7 @@
 @section('title', 'Forum')
 
 @section('content')
-<div class="container">
+<div class="container p-4">
     <h2 class="text-color-primary fw-bold text-center p-5" style="color: #592C75 ;">
         {{ $forum->title }}
     </h2>
