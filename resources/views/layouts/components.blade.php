@@ -50,10 +50,10 @@
                             <iconify-icon inline icon="clarity:logout-line" style="color: #592c75;"></iconify-icon> Logout
                         </a>
                     </li>
+                    @elseif (Auth::user()->role == 'Admin')
                     <li class="nav-item">
                         <a class="nav-link" href="/admin-dashboard">Dashboard</a>
                     </li>
-                    @else
                     <li class="nav-item">
                         <a class="nav-link" href="/logout">
                             <iconify-icon inline icon="clarity:logout-line" style="color: #592c75;"></iconify-icon> Logout
