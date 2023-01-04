@@ -46,7 +46,7 @@
                         <button  type="submit" class="btn btn-primary">Submit</button>
                     </div>
                     <div class="col-sm-3 d-grid">
-                        <a class="btn btn-primary" type="cancel" href="/add-user">Cancel</a>
+                        <a type="cancel" href="/add-user">Cancel</a>
                     </div>
                 </div>
             </form>
@@ -99,7 +99,12 @@
                                                     <input value="{{ $userData->email }}" type="email" class="form-control" name="email" placeholder="Email">
 
                                                     <label class="col-sm-3 col-form-label mt-3">Status</label>
-                                                    <input value="{{ $userData->status }}" type="status" class="form-control" name="status" placeholder="Status">
+                                                    <select id="roleselect" name="status" class="form-control">
+                                                        <option selected disabled>Choose...</option>
+                                                        <option value="active">Active</option>
+                                                        <option value="nonactive">Non Active</option>
+                                                    </select>
+                                                    <!-- <input value="{{ $userData->status }}" type="status" class="form-control" name="status" placeholder="Status"> -->
 
                                                     <label class="col-sm-3 col-form-label mt-3">Role</label>
                                                     <select id="roleselect" name="role" class="form-control">

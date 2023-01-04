@@ -12,7 +12,7 @@ class InternController extends Controller
 {
     public function index()
     {
-        $intern = Intern::where('status', '1')->get();
+        $intern = Intern::where('status', 'active')->get();
         // $intern = DB::table('intern')->where('status', 1);
         return view('user_views/interns', ['internList' => $intern]);
     }
