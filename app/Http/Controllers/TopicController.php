@@ -9,6 +9,11 @@ use App\Models\Topic;
 
 class TopicController extends Controller
 {
+    public function landing(Request $request)
+    {
+        $topic = Topic::all();
+        return view('user_views/landing_topics', ['topicList' => $topic]);
+    }
     public function index(Request $request)
     {
 

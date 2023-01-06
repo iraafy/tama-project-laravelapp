@@ -59,7 +59,7 @@
                 Our Feature
             </h2>
             <div class="col-lg-6 col-sm-12 pb-4">
-                <a href="/topics">
+                <a href="/landing_topics">
                     <div class="card shadow d-flex justify-content-center align-items-center" style="min-height: 300px;">
                         <img src="assets/img/skripsi.png" width="50%" class="" alt="skripsi">
                         <p class="fs-4 text-color-primary pt-4">Topik Skripsi</p>

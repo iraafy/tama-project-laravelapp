@@ -4,12 +4,160 @@
 
 body{
   counter-reset: my-sec-counter;
+  scroll-behavior: smooth;
+}
+
+.float{
+	position:fixed;
+	width:60px;
+	height:60px;
+	bottom:40px;
+	right:40px;
+	background: linear-gradient(to bottom, #66ffff 0%, #0066ff 100%);
+	color:#FFF;
+	border-radius:50px;
+	text-align:center;
+	box-shadow: 2px 2px 3px #999;
+}
+
+.social a{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	padding: 20px 15px;
+}
+.social{
+	position:fixed;
+	top: 50%;
+	right:50px;
+	transform: translateY(-50%);
+	border-radius: 20px;
+	background-color: #FFFFFF;box-shadow: 2px 2px 30px rgba(0,0,0,0.2);
+	padding: 5px 0px;
+	z-index: 1;
+}
+.social a i{
+	color:rgba(39,39,39,0.80);
+}
+ 
+.social a:hover .fa-facebook-f{
+	color: #3b5998;
+}
+.social a:hover .fa-twitter{
+	color: #00acee ;
+}
+.social a:hover .fa-instagram{
+	color:  #3f729b ;
+}
+.social a:hover .fa-youtube{
+ 
+	color: 	#FF0000;
+}
+
+
+.my-float{
+	margin-top:22px;
+}
+
+.headimg {
+  height: 100vh; 
+  background-size: cover; 
+  min-height:400px;
+}
+
+.imagetxt {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.bannertxt {
+  font-size: 2.5rem;
+  text-align: justify;
+}
+
+.headline {
+  font-size: 4.5rem;
+}
+
+.subject {
+  font-size: 4rem;
+}
+
+.general {
+  font-size: 1.5rem;
+  text-align: justify;
+}
+
+.txtcard {
+  font-size: 1rem;
+  text-align: justify;
+}
+
+.card-bg {
+  background: linear-gradient(to bottom, #66ffff 0%, #0066ff 100%);
+  border-radius: 0px 0px 20px 20px;
+}
+
+.card-img {
+  transition: transform .2s;
+  width: 100%;
+}
+
+.card-img:hover {
+  transform: scale(1.05);
 }
 
 .counter::before {
   /* Increment "my-sec-counter" by 1 */
   counter-increment: my-sec-counter;
   content: counter(my-sec-counter) ". ";
+}
+
+.button {
+  border-radius: 20px;
+  background-color: #f4511e;
+  border: none;
+  color: #FFFFFF;
+  text-align: center;
+  padding: 5px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  width: 220px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
+}
+
+.button span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.2s;
+}
+
+.button span a {
+    color: #FFFFFF;
+}
+
+.button span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  /* transition: 0.2s; */
+}
+
+.button:hover span {
+  padding-right: 25px;
+}
+
+.button:hover span:after {
+  opacity: 1;
+  right: 0;
 }
 
 #myBtn {
@@ -163,6 +311,12 @@ a {
 
 @media screen and (max-width: 768px) {
 
+    .headimg {
+      height: 100vh; 
+      object-fit: cover;
+      min-height:400px;
+    }
+
     .centered-text {
         padding-top: 30px;
         text-align: center;
@@ -198,6 +352,53 @@ a {
     
     .hidden-btn {
         display: block !important;
+    }
+
+    .imglogo {
+      width: 30%;
+      margin-top: 50px;
+    }
+
+    .bannertxt {
+      font-size: 1.5rem;
+      text-align: justify;
+    }
+
+    .headline {
+      font-size: 2.5rem;
+    }
+
+    .general {
+      font-size: 1rem;
+    }
+
+    .subject {
+      font-size: 2rem;
+    }
+
+    .txtcard {
+      text-align: justify;
+      display: none;
+    }
+
+    .card-title {
+      font-size: 1rem;
+    }
+
+    .button {
+      border-radius: 20px;
+      background-color: #f4511e;
+      border: none;
+      color: #FFFFFF;
+      text-align: center;
+      padding: 10px;
+      width: 150px;
+      transition: all 0.5s;
+      cursor: pointer;
+      margin: 5px;
+    }
+    .social {
+      display: none;
     }
 }
 

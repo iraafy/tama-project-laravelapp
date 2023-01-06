@@ -83,6 +83,7 @@ Route::post('/login', [AuthController::class, 'authenticating'])->middleware('gu
 
 Route::get('/logout', [AuthController::class, 'logout'])->middleware('auth');
 Route::get('/topics', [TopicController::class, 'index'])->middleware('auth');
+Route::get('/landing_topics', [TopicController::class, 'landing'])->middleware('auth');
 Route::get('/interns', [InternController::class, 'index'])->middleware('auth');
 Route::get('/forums', [ForumController::class, 'index'])->middleware(['auth']);
 Route::post('/add_forum', [ForumController::class, 'store'])->middleware(['auth']);
