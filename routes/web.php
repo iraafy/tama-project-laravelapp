@@ -109,3 +109,8 @@ Route::delete('/destroy-user/{id}', [AuthController::class, 'destroy'])->middlew
 Route::post('/hide/{id}', [InternController::class, 'hide_intern'])->middleware(['auth', 'admin-middleware']);
 
 Route::get('/add-topic/search', [TopicController::class, 'search_topic'])->middleware('auth', 'lecturer-middleware');
+
+Route::get('/forgot',[AuthController::class,'showForgotForm'])->middleware('guest');
+Route::post('/forgot',[AuthController::class,'sendResetLink'])->name('sendResetLink')->middleware('guest');
+Route::get('/reset/{token}',[AuthController::class,'showResetForm'])->name('showResetForm')->middleware('guest');
+Route::post('/reset',[AuthController::class,'resetPassword'])->name('resetPassword')->middleware('guest');
