@@ -16,19 +16,19 @@
                 <div class="row mb-3">
                     <label class="col-sm-3 col-form-label">Nama Lengkap</label>
                     <div class="col-sm-9">
-                        <input type="text" name="name" class="form-control" placeholder="Nama Lengkap">
+                        <input type="text" name="name" class="form-control" placeholder="Masukan Nama Lengkap">
                     </div>
                 </div>
                 <div class="row mb-3">
                     <label class="col-sm-3 col-form-label">Email</label>
                     <div class="col-sm-9">
-                        <input type="email" class="form-control" name="email" placeholder="Email">
+                        <input type="email" class="form-control" name="email" placeholder="Masukan Email">
                     </div>
                 </div>
                  <div class="row mb-3">
                     <label class="col-sm-3 col-form-label">Password</label>
                     <div class="col-sm-9">
-                        <input type="password" class="form-control" name="password" placeholder="Password">
+                        <input type="password" class="form-control" name="password" placeholder="Masukan Password">
                     </div>
                 </div> 
                 <div class="row mb-3">
@@ -93,10 +93,10 @@
                                                     <input hidden type="text" class="form-control mb-3" name="id" id="id" value="{{ $userData->id }}">
 
                                                     <label class="col-sm-3 col-form-label mt-3">Nama Lengkap</label>
-                                                    <input value="{{ $userData->name }}" type="text" name="name" class="form-control" placeholder="Nama Lengkap">
+                                                    <input value="{{ $userData->name }}" type="text" name="name" class="form-control" placeholder="Masukan Nama Lengkap">
 
                                                     <label class="col-sm-3 col-form-label mt-3">Email</label>
-                                                    <input value="{{ $userData->email }}" type="email" class="form-control" name="email" placeholder="Email">
+                                                    <input value="{{ $userData->email }}" type="email" class="form-control" name="email" placeholder="Masukan Email">
 
                                                     <label class="col-sm-3 col-form-label mt-3">Status</label>
                                                     <select id="roleselect" name="status" class="form-control">
