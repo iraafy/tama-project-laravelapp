@@ -192,10 +192,10 @@
                                 <div class="col-md-6 col-sm-12 mb-3">
                                     <a href="/landing_topics">
                                         <div class="card card-hover shadow p-5">
-                                            <img style="width: 51%" class="centered" alt="100%x280" src="assets/img/skripsi.png">
+                                            <img style="width: 57%" class="centered" alt="100%x280" src="assets/img/skripsi.png">
                                             <div class="card-body text-center pt-4">
                                                 <h4 class="card-title text-color-primary">Topik Skripsi</h4>
-                                                <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                                                <p class="card-text">Layanan ini berisi informasi topik skripsi yang tersedia.</p>
                                             </div>
                                         </div>
                                     </a>
@@ -206,7 +206,7 @@
                                             <img style="width: 40%" class="centered" alt="100%x280" src="assets/img/ppl.png">
                                             <div class="card-body text-center pt-4">
                                                 <h4 class="card-title text-color-primary">Rekomendasi PPL</h4>
-                                                <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                                                <p class="card-text">Layanan ini berisi informasi rekomendasi tempat magang yang tersedia.</p>
                                             </div>
                                         </div>
                                     </a>
@@ -221,7 +221,7 @@
                                             <img style="width: 40%" class="centered" alt="100%x280" src="assets/img/forum.png">
                                             <div class="card-body text-center pt-4">
                                                 <h4 class="card-title text-color-primary">Forum Diskusi</h4>
-                                                <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                                                <p class="card-text">Layanan ini dapat digunakan sebagai tempat diskusi berbagai hal terkait kampus.</p>
 
                                             </div>
                                         </div>
@@ -233,7 +233,7 @@
                                             <img style="width: 40%" class="centered" alt="100%x280" src="assets/img/denah.png">
                                             <div class="card-body text-center pt-4">
                                                 <h4 class="card-title text-color-primary">Denah UPI</h4>
-                                                <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                                                <p class="card-text">Layanan ini berisikan informasi denah UPI berupa game yang dapat digunakan oleh mahasiswa baru.</p>
 
                                             </div>
                                         </div>
