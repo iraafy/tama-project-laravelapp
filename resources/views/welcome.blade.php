@@ -1,9 +1,9 @@
-@extends('layouts.components')
+@extends('layouts.landing_page_nav')
 
 @section('title', 'Tama Hallo')
 
 @section('content')
-<div class="container">
+<!-- <div class="container">
     <div class="wrapper">
         <div class="space">
             <div class="row">
@@ -94,5 +94,86 @@
         <br><br><br><br>
 
     </div>
+</div> -->
+<!-- Start Home Section -->
+<section id="home">
+    <div class="container-fluid" style="background-image: url(assets/img/header-imgg.png); background-repeat: no-repeat;">
+        <br><br>
+        <div class="row pt-3 pb-5">
+            <div class="col-lg-6 col-md-6 col-sm-12">
+                <div class="row pt-5 ms-5 ps-5">
+                    <h1>
+                        <h1 class="welcome-text text-color-primary fw-bold lh-1 mt-5">
+                            Tama Hallo
+                        </h1>
+                        <br>
+                    </h1>
+                    <p class="welcome-p-text">Membantu mahasiswa dalam permasalahan</p>
+                </div>
+            </div>
+            <div class="col-lg-6 col-md-6 col-sm-12 centered">
+                <img src="assets/img/head.png" width="80%" class="centered" alt="">
+            </div>
+        </div>
+    </div>
+</section>
+<!-- End Home Section -->
+
+<!-- Start About Section -->
+<section id="about" class="mb-4">
+    <div class="container-fluid">
+        <div class="row ps-5 pe-5">
+            <div class="col-lg-6 col-md-6 col-sm-12 mb-3">
+                <img src="assets/img/male.png" width="100%" alt="">
+            </div>
+            <div class="col-lg-6 col-md-6 col-sm-12 centered">
+                <div class="container">
+                    <div class="row">
+                        <h2 class="right-style-text text-color-primary">
+                            <b>
+                                Tentang Kami
+                            </b>
+                        </h2>
+                        <p class="mt-5" style="text-align: justify;">
+                            Kami adalah website informasi dan layanan konsultasi mahasiswa UPI yang bergerak di bidang akademik dan non akademik. Kami berusaha untuk memberikan informasi yang terpercaya dan akurat kepada mahasiswa UPI. Kami juga berusaha untuk memberikan layanan konsultasi kepada mahasiswa UPI yang membutuhkan.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- End About Section -->
+
+<!-- Start Requirements Section -->
+<section id="requirements" class="p-5">
+    <br>
+    <div class="container">
+        <div class="row">
+            <h2 class="mt-3 mb-3 pb-5 text-center text-color-primary">
+                <b>
+                    Universitas Pendidikan Indonesia
+                </b>
+            </h2>
+            <div class="row text-center">
+                <i>
+                    Universitas Pendidikan Indonesia adalah salah satu kampus negeri yang ada di Indonesia. Kampus ini berada di Jawa Barat tepatnya di Bandung.
+                    Salah satu jurusan yang ada di kampus ini adalah Ilmu Komputer yang terdapat di Fakultas Matematika dan Ilmu Pengetahuan Alam.
+                    Ilmu komputer merupakan salah satu program studi yang paling diminati oleh mahasiswa, karena program studi ini memiliki banyak jurusan yang dapat dipilih.
+                    Jurusan yang dapat dipilih di jurusan ini diantaranya adalah Sistem Informasi, Multimedia, Rekayasa Perangkat Lunak, Jaringan, Artificial Intelligent dan Big Data.
+                    Jurusan-jurusan ini memerlukan diskusi yang cukup baik. Oleh karena itu kami menyediakan layanan forum diskusi untuk mahasiswa jurusan Ilmu Komputer.
+                    Selain itu kami juga menyediakan beberapa layanan informasi yang dapat digunakan baik oleh mahasiswa lama maupun mahasiswa baru.
+                </i>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- End Requirements Section -->
+
+<!-- Start Footer -->
+<div class="footer">
+    Copyright all reserved &copy; 2022
 </div>
+<!-- End Footer -->
+
 @endsection

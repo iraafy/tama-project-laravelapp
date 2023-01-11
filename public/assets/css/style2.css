@@ -1,0 +1,166 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+.text-color-primary {
+    color: #592C75 !important;
+}
+
+.bg-color-primary {
+    background-color: #592C75 !important;
+}
+
+.space {
+    margin-top: 10%;
+    margin-bottom: 5%;
+}
+
+p {
+    font-size: 15px;
+}
+
+.welcome-text {
+    font-size: 3rem;
+    padding-top: 7%;
+}
+
+.welcome-p-text {
+    font-size: 20px;
+}
+
+.wrapper {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
+.navbar {
+    background-color: white !important; 
+    box-shadow: 0px 0px 10px -2px rgba(0,0,0,0.35);
+}
+
+.active::before{
+    content: '';
+    position: absolute;
+    bottom: 15px;
+    height: 5px;
+    width: 20px;
+    border-radius: 20px;
+    background-color: #435D8D;
+    opacity: 0;
+    transition: all 0.3s ease;
+}
+
+.active::before{
+    opacity: 1;
+}
+
+.centered {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+}
+
+/* section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    width: 100%;
+} */
+
+.h1-bigstyle {
+    font-size: 100px;
+    font-weight: bold;
+    text-transform: uppercase;
+    line-height: 60px;
+} 
+
+section h4 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    text-transform: uppercase;
+} 
+
+.p-section {
+    font-size: 15px;
+    border: 1px solid #435D8D;
+    border-radius: 5px;
+    width: fit-content;
+    margin-left: 14px;
+    padding: 12px;
+    /* padding: 20px; */
+}
+
+.active {
+    display: flex;
+    justify-content: center;
+}
+
+.about-page {
+    width: 100%;
+    background-color: rgb(238, 238, 238);
+}
+
+.right-style-text {
+    text-align: right;
+}
+
+.content-right {
+    color: rgb(77, 77, 77);
+    position: relative;
+    font-size: 13px;
+}
+
+.footer {
+    width: 100%;
+    text-align: center;
+    box-shadow: 0px 0px 10px -2px rgba(0,0,0,0.35);
+    background-color: rgb(233, 233, 233);
+    padding: 8px;
+}
+
+.card {
+    width: 100%;
+    min-height: 300px;
+}
+
+.card .comment {
+    display: none;
+}
+
+.card:hover {
+    background-color: #ebebeb;
+    font-size: 14px;
+}
+
+.card:hover .replies {
+    display: none;
+}
+
+.card:hover .comment {
+    display: inline;
+}
+
+.fadeIn { animation: fadeIn 1s; }
+
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+@media (max-width: 768px) {
+    .h1-bigstyle {
+        font-size: 50px;
+        line-height: 50px;
+    }
+
+    .right-style-text {
+        text-align: center;
+    }
+
+}
