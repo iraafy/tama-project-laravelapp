@@ -13,7 +13,7 @@
                             <h1 class="welcome-text text-color-primary fw-bold lh-1">
                                 Admin Dashboard
                             </h1>
-                            <p class="welcome-p-text">Welcome, Admin</p>
+                            <p class="welcome-p-text">Welcome, {{ Auth::user()->name }}</p>
                         </div>
                     </div>
                     <div class="col-lg-5 col-sm-12">
