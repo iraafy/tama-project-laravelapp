@@ -22,7 +22,7 @@
     <header>
         <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
             <div class="container ps-4 pe-4">
-                <a class="navbar-brand" href="#">
+                <a class="navbar-brand" href="/">
                     <iconify-icon inline icon="fluent-emoji:robot" class="fs-2"></iconify-icon>
                 </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">

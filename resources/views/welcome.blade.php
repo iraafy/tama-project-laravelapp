@@ -101,14 +101,12 @@
         <div class="card card-opacity">
             <br><br>
             <div class="row pb-5">
-                <div class="col-lg-6 col-md-6 col-sm-12">
+                <div class="col-lg-6 col-md-6 col-sm-12 mb-4 centered">
                     <div class="row">
-                        <h1>
-                            <h1 class="welcome-text text-center text-color-primary fw-bold lh-1 mt-5">
-                                Tama Hallo
-                            </h1>
-                            <br>
+                        <h1 class="welcome-text text-center text-color-primary fw-bold lh-1">
+                            Tama Hallo
                         </h1>
+                        <br>
                         <p class="welcome-p-text text-center">Membantu mahasiswa dalam permasalahan</p>
                     </div>
                 </div>
@@ -122,7 +120,8 @@
 <!-- End Home Section -->
 
 <!-- Start About Section -->
-<section id="about" class="mb-4">
+<section id="about">
+    <br><br><br>
     <div class="container">
         <div class="row">
             <div class="col-lg-5 col-md-6 col-sm-12 mb-3">
@@ -191,7 +190,7 @@
                         <div class="carousel-item active">
                             <div class="row">
                                 <div class="col-md-6 col-sm-12 mb-3">
-                                    <a href="/landing_topic">
+                                    <a href="/landing_topics">
                                         <div class="card card-hover shadow p-5">
                                             <img style="width: 51%" class="centered" alt="100%x280" src="assets/img/skripsi.png">
                                             <div class="card-body text-center pt-4">

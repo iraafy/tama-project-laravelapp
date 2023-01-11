@@ -6,7 +6,7 @@
 <div class="wrappers">
     <div id="sidebar">
         <div class="border-end bg-white" id="sidebar-wrapper">
-        <br><br>
+            <br><br>
             <div class="list-group list-group-flush">
                 <a href="/interns?code=Frontend Developer" class="text-black list-group-item list-group-item-action list-group-item-light p-3" style="font-size: small;">
                     Frontend Developer
@@ -208,7 +208,7 @@
             @endif
             @endforeach
             @else
-            <h5 class="pt-3">Silahkan Pilih Role</h5>
+            <h5 class="pt-3 mt-5">Silahkan Pilih Role</h5>
             @endif
         </div>
     </div>
@@ -216,9 +216,9 @@
 @endsection
 
 <script>
-// $(document).ready(function() {
-//     $('[data-toggle=offcanvas]').click(function() {
-//         $('.row-offcanvas').toggleClass('active');
-//     });
-// });
+    // $(document).ready(function() {
+    //     $('[data-toggle=offcanvas]').click(function() {
+    //         $('.row-offcanvas').toggleClass('active');
+    //     });
+    // });
 </script>
