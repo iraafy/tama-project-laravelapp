@@ -6,7 +6,7 @@
 <div class="container mt-5 pt-5">
     <div class="row mt-2 justify-content-center">
         <div class="p-4 col-lg col-sm-12 d-flex justify-content-center align-items-center">
-            <img src="{{URL::asset('assets/img/login.png')}}" style="margin: 0 auto;" width="85%">
+            <img src="{{URL::asset('assets/img/pass_baru.jpg')}}" style="margin: 0 auto;" width="85%">
         </div>
         <div class="p-4 col-lg col-sm-12 pt-3 mt-5">
             <h3 class="fw-bold mb-5 text-center" style="color: #592C75">PASSWORD BARU</h3>
@@ -25,7 +25,7 @@
                 <input type="hidden" name="token" value="{{ $token }}">
                 <div class="mb-3">
                     <label for="username">Email:</label>
-                    <input placeholder="Email" type="email" name="email" class="form-control" value="{{ $email }}" required disabled>
+                    <input placeholder="Email" type="email" name="email" class="form-control" value="{{ $email }}" required>
                     <span class="text-danger">@error('email'){{ $message }}@enderror</span>
                 </div>
                 <div class="mb-3">
