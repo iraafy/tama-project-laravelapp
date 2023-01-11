@@ -36,14 +36,14 @@
                 <div class="row mb-3">
                     <label for="" class="col-sm-3 col-form-label">Deskripsi Kajian</label>
                     <div class="col-sm-9">
-                        <input type="text" class="form-control" name="deskripsi_kajian" placeholder="Deskripsi Kajian">
+                        <input type="text" class="form-control" name="deskripsi_kajian" placeholder="Isi deskripsi kajian dengan judul materi">
                     </div>
                 </div>
                 <div class="row mb-3">
                     <label for="" class="col-sm-3 col-form-label">Content</label>
                     <div class="col-sm-9">
                         <input id="content" type="hidden" name="content">
-                        <trix-editor input="content" value="content"></trix-editor>
+                        <trix-editor input="content" value="content" placeholder="Isi konten dengan pembahasan materi"></trix-editor>
                     </div>
                 </div>
 
@@ -151,7 +151,7 @@
 
                                                 <label class="fw-bold pb-1" for="content">Content</label>
                                                 
-                                                <input id="konten-{{ $topicData->id }}" type="hidden" name="content" value="{!! old('content', $topicData->content) !!}">
+                                                <input id="konten-{{ $topicData->id }}" type="hidden" name="content" placeholder="Isi konten dengan pembahasan materi" value="{!! old('content', $topicData->content) !!}">
                                                 <trix-editor input="konten-{{ $topicData->id }}"></trix-editor>
                                                 
 
