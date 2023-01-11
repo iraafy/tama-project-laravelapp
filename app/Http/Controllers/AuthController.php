@@ -157,10 +157,10 @@ class AuthController extends Controller
          ]);
 
          $action_link = route('showResetForm',['token'=>$token,'email'=>$request->email]);
-         $body = "We are received a request to reset the password for <b>Your app Name </b> account associated with ".$request->email.". You can reset your password by clicking the link below";
+         $body = "Kami menerima permintaan untuk menyetel ulang sandi untuk akun <b>TAMA </b> yang terkait dengan ".$request->email.". Anda dapat mengatur ulang kata sandi Anda dengan mengklik tautan di bawah ini";
 
         \Mail::send('email-forgot',['action_link'=>$action_link,'body'=>$body], function($message) use ($request){
-              $message->from('noreply@example.com','Your App Name');
+              $message->from('noreply@example.com','TAMA');
               $message->to($request->email,'Your name')
                       ->subject('Reset Password');
         });

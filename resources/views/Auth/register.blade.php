@@ -20,15 +20,15 @@
                 @csrf
                 <div class="mb-3">
                     <label for="username">Nama Lengkap:</label>
-                    <input placeholder="Nama Lengkap" type="text" name="name" class="form-control" required>
+                    <input placeholder="Masukkan Nama Lengkap Anda" type="text" name="name" class="form-control" required>
                 </div>
                 <div class="mb-3">
                     <label for="email">Email:</label>
-                    <input placeholder="Email" type="email" name="email" class="form-control" required>
+                    <input placeholder="Masukkan Alamat Email Anda" type="email" name="email" class="form-control" required>
                 </div>
                 <div class="mb-3">
                     <label for="password">Password:</label>
-                    <input placeholder="Password" type="password" name="password" class="form-control" required>
+                    <input placeholder="Masukkan Password Anda" type="password" name="password" class="form-control" required>
                 </div>
                 <button type="submit" class="btn bg-color-primary text-white w-100 mt-3">Register</button>
                 <p class="text-center pt-3">Sudah punya akun? <a href="/login" class="text-color-primary">Login</a></p>
