@@ -13,7 +13,7 @@
     <form action="" method="get">
         <div class="form-group row">
             <div class="col-sm-11 p-0 m-0">
-                <input type="text" name="keyword" class="form-control" placeholder="Search by title">
+                <input type="text" name="keyword" class="form-control" placeholder="Masukan Apa Yang Anda Cari">
             </div>
             <button type="submit" class="col-sm-1 btn bg-color-primary text-white">Search</button>
         </div>
@@ -65,14 +65,14 @@
                         <div class="row mb-3">
                             <label for="" class="col-sm-3 col-form-label">Title</label>
                             <div class="col-sm-9">
-                                <input type="text" class="form-control" name="title" placeholder="title">
+                                <input type="text" class="form-control" name="title" placeholder="Masukkan Judul Diskusi">
                             </div>
                         </div>
                         <input hidden type="text" class="form-control" name="user_id" value="{{ Auth::id() }}">
                         <div class="row mb-3">
                             <label for="" class="col-sm-3 col-form-label">Content</label>
                             <div class="col-sm-9">
-                                <textarea name="content" class="form-control" rows="5" placeholder="Content"></textarea>
+                                <textarea name="content" class="form-control" rows="5" placeholder="Masukkan Pesan"></textarea>
                             </div>
                         </div>
                     </div>

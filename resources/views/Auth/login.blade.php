@@ -19,11 +19,11 @@
                 @csrf
                 <div class="mb-3">
                     <label for="username">Email:</label>
-                    <input placeholder="Email" type="email" name="email" class="form-control" required>
+                    <input placeholder="Masukkan Email Anda" type="email" name="email" class="form-control" required>
                 </div>
                 <div class="mb-3">
                     <label for="password">Password:</label>
-                    <input placeholder="Password" type="password" name="password" class="form-control" required>
+                    <input placeholder="Masukkan Password Anda" type="password" name="password" class="form-control" required>
                 </div>
                 <button type="submit" name="login" class="btn bg-color-primary text-white w-100 mt-3">LOGIN</button>
             </form>
